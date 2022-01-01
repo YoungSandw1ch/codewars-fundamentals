@@ -65,29 +65,29 @@
 
 //=======================================================
 
-function XO(str) {
-  const stringToLowerCaseArray = str.toLowerCase().split('');
-  let countX = 0;
-  let countO = 0;
+// function XO(str) {
+//   const stringToLowerCaseArray = str.toLowerCase().split('');
+//   let countX = 0;
+//   let countO = 0;
 
-  for (const item of stringToLowerCaseArray) {
-    switch (item) {
-      case 'x':
-        countX += 1;
-        break;
+//   for (const item of stringToLowerCaseArray) {
+//     switch (item) {
+//       case 'x':
+//         countX += 1;
+//         break;
 
-      case 'o':
-        countO += 1;
-        break;
-    }
-  }
+//       case 'o':
+//         countO += 1;
+//         break;
+//     }
+//   }
 
-  console.log('countX: ', countX);
-  console.log('countO: ', countO);
-  return countX === countO ? true : false;
-}
+//   console.log('countX: ', countX);
+//   console.log('countO: ', countO);
+//   return countX === countO ? true : false;
+// }
 
-console.log(XO('qwdqwixoxoxoxo'));
+// console.log(XO('qwdqwixoxoxoxo'));
 //=======================================================
 //=======================================================
 //=======================================================
