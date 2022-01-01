@@ -1,6 +1,93 @@
 //=======================================================
+// function disemvowel(str) {
+//   const stringToArray = str.split('');
+//   let filteredArray = [];
+//   let string = '';
+
+//   for (const letter of stringToArray) {
+//     if (
+//       letter !== 'A' &&
+//       letter !== 'a' &&
+//       letter !== 'E' &&
+//       letter !== 'e' &&
+//       letter !== 'I' &&
+//       letter !== 'i' &&
+//       letter !== 'O' &&
+//       letter !== 'o' &&
+//       letter !== 'U' &&
+//       letter !== 'u'
+//     ) {
+//       filteredArray.push(letter);
+//     }
+//   }
+
+//   string = filteredArray.join('');
+//   return string;
+// }
+// console.log(disemvowel('This website is for losers LOL!'));
+
+//--------------- альтернативный вариант
+
+// function disemvowel(str) {
+//   const stringToArray = str.split('');
+//   const vovels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u'];
+//   let filteredArray = [];
+
+//   for (const letter of stringToArray) {
+//     if (!vovels.includes(letter)) {
+//       filteredArray.push(letter);
+//     }
+//   }
+
+//   return filteredArray.join('');
+// }
+// console.log(disemvowel('This website is for losers LOL!'));
+// console.log(
+//   disemvowel("No offense but,\nYour writing is among the worst I've ever read"),
+// );
+
 //=======================================================
+
+// function getCount(str) {
+//   var vowelsCount = 0;
+//   const vowels = ['a', 'e', 'i', 'o', 'u'];
+//   const stringToArray = str.split('');
+
+//   for (const item of stringToArray) {
+//     if (vowels.includes(item)) {
+//       vowelsCount += 1;
+//     }
+//   }
+
+//   return vowelsCount;
+// }
+// console.log(getCount('avadacedavra little toortles'));
+
 //=======================================================
+
+function XO(str) {
+  const stringToLowerCaseArray = str.toLowerCase().split('');
+  let countX = 0;
+  let countO = 0;
+
+  for (const item of stringToLowerCaseArray) {
+    switch (item) {
+      case 'x':
+        countX += 1;
+        break;
+
+      case 'o':
+        countO += 1;
+        break;
+    }
+  }
+
+  console.log('countX: ', countX);
+  console.log('countO: ', countO);
+  return countX === countO ? true : false;
+}
+
+console.log(XO('qwdqwixoxoxoxo'));
 //=======================================================
 //=======================================================
 //=======================================================
