@@ -137,14 +137,56 @@
 
 //=======================================================
 
-function getSum(a, b) {}
+// function getSum(a, b) {
+//   let sum = 0;
+//   let c = 0;
 
-console.log(getSum(0, -1));
-console.log(getSum(0, 1));
-console.log(getSum((-1, 2)));
-console.log(getSum(0, 20));
+//   for (let i = 0; i <= b - a; i += 1) {
+//     if (c < b) {
+//       c = a + i;
+//     }
+
+//     sum = a + c;
+//   }
+
+//   return sum;
+//   // const array = [];
+//   // console.log(array);
+//   // if (a < b) {
+//   //   array.push(a + 1);
+//   //   a += 1;
+//   // }
+//   // return array.split('').Number;
+// }
+
+// // console.log(getSum(0, -1));
+// // console.log(getSum(0, 1));
+// // console.log(getSum((-1, 2)));
+// console.log(getSum(0, 20));
 
 //=======================================================
+function getSum(a, b) {
+  let sum = 0;
+  let c = 0;
+
+  for (let i = a; i <= b; i += 1) {
+    sum += i;
+  }
+
+  return sum;
+  // const array = [];
+  // console.log(array);
+  // if (a < b) {
+  //   array.push(a + 1);
+  //   a += 1;
+  // }
+  // return array.split('').Number;
+}
+
+// console.log(getSum(0, -1));
+// console.log(getSum(0, 1));
+// console.log(getSum((-1, 2)));
+console.log(getSum(0, 2));
 //=======================================================
 //=======================================================
 //=======================================================
