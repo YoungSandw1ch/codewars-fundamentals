@@ -88,8 +88,62 @@
 // }
 
 // console.log(XO('qwdqwixoxoxoxo'));
+
+//==================РЕШЕНИЕ В NEED HELP===================
+
+// function order(words) {
+//   const wordsArray = words.split(' ');
+// const legth = wordsArray.length;
+
+// for (const word of wordsArray) {
+// console.log('массив слов: ', wordsArray);
+// const letters = word.split('');
+// console.log('массив букв из слова: ', letters);
+
+// if (word.split('').includes('1')) {
+//   wordsArray[1 - 1] = word;
+//   // break;
+// } else if (word.split('').includes('2')) {
+//   wordsArray[2 - 1] = word;
+//   // break;
+// } else if (word.split('').includes('3')) {
+//   wordsArray[3 - 1] = word;
+//   // break;
+// } else if (word.split('').includes('4')) {
+//   wordsArray[4 - 1] = word;
+//   // break;
+// } else if (word.split('').includes('5')) {
+//   wordsArray[5 - 1] = word;
+// }
+// for (const letter of letters) {
+//   for (let i = 1; i <= legth; i += 1) {
+//     // console.log(letter);
+//     // console.log(Number(letter));
+//     // console.log(i);
+//     if (Number(letter) === i) {
+//       // console.log(i);
+//       wordsArray[i - 1] = word;
+//     }
+//   }
+// }
+//   }
+//   return wordsArray.join(' ');
+// }
+
+// console.log(order('6 2 3 5 4 1'));
+// console.log(order('is2 Thi3s Thi1s T5est rw4dq'));
+// console.log(order('is2 Thi1s T4est 3a'));
+// console.log(order('4of Fo1r pe6ople g3ood th5e the2'));
+
 //=======================================================
-//=======================================================
+
+function getSum(a, b) {}
+
+console.log(getSum(0, -1));
+console.log(getSum(0, 1));
+console.log(getSum((-1, 2)));
+console.log(getSum(0, 20));
+
 //=======================================================
 //=======================================================
 //=======================================================
