@@ -183,10 +183,10 @@ function getSum(a, b) {
   // return array.split('').Number;
 }
 
-// console.log(getSum(0, -1));
+console.log(getSum(0, -1));
 // console.log(getSum(0, 1));
 // console.log(getSum((-1, 2)));
-console.log(getSum(0, 2));
+// console.log(getSum(0, 2));
 //=======================================================
 //=======================================================
 //=======================================================
