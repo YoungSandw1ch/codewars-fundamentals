@@ -164,30 +164,60 @@
 // // console.log(getSum((-1, 2)));
 // console.log(getSum(0, 20));
 
-//=======================================================
-function getSum(a, b) {
-  let sum = 0;
-  let c = 0;
+//======================НЕ ДОДЕЛАЛ=================================
+// function getSum(a, b) {
+//   let sum = 0;
+//   let c = 0;
 
-  for (let i = a; i <= b; i += 1) {
-    sum += i;
-  }
+//   for (let i = a; i <= b; i += 1) {
+//     sum += i;
+//   }
 
-  return sum;
-  // const array = [];
-  // console.log(array);
-  // if (a < b) {
-  //   array.push(a + 1);
-  //   a += 1;
-  // }
-  // return array.split('').Number;
-}
+//   return sum;
+// const array = [];
+// console.log(array);
+// if (a < b) {
+//   array.push(a + 1);
+//   a += 1;
+// }
+// return array.split('').Number;
+// }
 
-console.log(getSum(0, -1));
+// console.log(getSum(0, -1));
 // console.log(getSum(0, 1));
 // console.log(getSum((-1, 2)));
 // console.log(getSum(0, 2));
 //=======================================================
+
+// function findNeedle(haystack) {
+//   const needle = 'needle';
+//   return `found the needle at position ${haystack.indexOf('needle')}`;
+// }
+
+// var haystack_1 = [
+//   '3',
+//   '123124234',
+//   undefined,
+//   'needle',
+//   'world',
+//   'hay',
+//   2,
+//   '3',
+//   true,
+//   false,
+// ];
+// var haystack_2 = [
+//   '283497238987234',
+//   'a dog',
+//   'a cat',
+//   'some random junk',
+//   'a piece of hay',
+//   'needle',
+//   'something somebody lost a while ago',
+// ];
+// console.log(findNeedle(haystack_1));
+// console.log(findNeedle(haystack_2));
+
 //=======================================================
 //=======================================================
 //=======================================================
