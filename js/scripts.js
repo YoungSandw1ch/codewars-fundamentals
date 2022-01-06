@@ -255,24 +255,23 @@
 // console.log(basicOp('*', 5, 5));
 // console.log(basicOp('/', 49, 7));
 //=======================================================
-function validatePIN(pin) {
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const pinNumbers = pin.split('');
-  console.log(pinNumbers);
-  console.log(pinNumbers.length);
 
-  if (pinNumbers.length !== 4 && pinNumbers.length !== 6) {
-    return false;
-  }
+// function validatePIN(pin) {
+//   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+//   const pinNumbers = pin.split('');
 
-  for (const pinNumber of pinNumbers) {
-    console.log(pinNumber);
-    if (numbers.includes(pinNumber)) {
-      // console.log();
-      return true;
-    }
-  }
-}
+//   if (pinNumbers.length !== 4 && pinNumbers.length !== 6) {
+//     return false;
+//   }
+
+//   for (const pinNumber of pinNumbers) {
+//     if (!numbers.includes(pinNumber)) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
 
 // console.log(validatePIN('1'));
 // console.log(validatePIN('12'));
@@ -281,7 +280,7 @@ function validatePIN(pin) {
 // console.log(validatePIN('-1234'));
 // console.log(validatePIN('00000000'));
 // console.log(validatePIN('-1.234'));
-console.log(validatePIN('1234'));
+// console.log(validatePIN('1234'));
 // console.log(validatePIN('434243'));
 // console.log(validatePIN('666666'));
 
