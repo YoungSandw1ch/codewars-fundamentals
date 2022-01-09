@@ -112,7 +112,43 @@
 // console.log(index('is2 Thi1s T4est 3a'));
 // console.log(index('4of Fo1r pe6ople g3ood th5e the2'));
 
-//=======================================================
+//=======Write Number in Expanded Form===============
+
+// function expandedForm(num) {
+//   let items = String(num).split('');
+//   console.log(items);.
+//   let newNum = [];
+//   const expanded = [];
+
+//   for (let i = 0; i < items.length; i += 1) {
+//     if (items[i] !== 0) {
+//       newNum.push(items[i]);
+//       while (newNum.length < items.length - 1) {
+//         newNum.push('0');
+//         newNum = newNum.push('0').join('');
+//       }
+//     }
+//     console.log(newNum);
+//   }
+// newNum.push(items[0]);
+// console.log(newNum);
+// while (newNum.length < items.length) {
+//   newNum.push('0');
+// }
+
+// expanded.push(newNum.join(''));
+// console.log(newNum);
+// console.log(expanded);
+// newNum = num - Number(expanded);
+// items = String(newNum).split('');
+// console.log(newNum);
+// console.log(items);
+// }
+
+// console.log(expandedForm(12));
+// console.log(expandedForm(42));
+// console.log(expandedForm(70304));
+
 //=======================================================
 //=======================================================
 //=======================================================
