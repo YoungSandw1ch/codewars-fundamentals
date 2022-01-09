@@ -149,7 +149,17 @@
 // console.log(expandedForm(42));
 // console.log(expandedForm(70304));
 
-//=======================================================
+//===========Duplicate Encoder===========================
+// function duplicateEncode(word) {
+//   const letters = word.split('');
+//   const brackets = [];
+
+//   for (let i = 0; i < letters.length; i += 1) {
+//     const letter = letters[i];
+//   }
+// }
+
+// console.log(duplicateEncode('recede'));
 //=======================================================
 //=======================================================
 //=======================================================
