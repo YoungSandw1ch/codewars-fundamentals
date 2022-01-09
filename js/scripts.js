@@ -307,7 +307,6 @@
 // console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
 
 //=======================================================
-//=======================================================
 
 // function bouncingBall(h, bounce, window) {
 //   let count = 1;
@@ -328,8 +327,29 @@
 // console.log(bouncingBall(3.0, 0.66, 1.5));
 // console.log(bouncingBall(30.0, 0.66, 1.5));
 // console.log(bouncingBall(0.9, 0.66, 1.5));
+
 //=======================================================
+
+// function squareDigits(num) {
+//   const ints = String(num).split('');
+//   const intsExponent = [];
+//   let newNum = 0;
+
+//   for (const int of ints) {
+//     intsExponent.push(Math.pow(int, 2));
+//     newNum = Number(intsExponent.join(''));
+//   }
+//   return newNum;
+// }
+
+// console.log(squareDigits(3212));
+// console.log(squareDigits(2112));
+// console.log(squareDigits(0));
+
 //=======================================================
+function isIsogram(str) {
+  //...
+}
 //=======================================================
 //=======================================================
 //=======================================================
