@@ -285,7 +285,41 @@
 // console.log(validatePIN('666666'));
 
 //=======================================================
+
+// function reverseWords(str) {
+//   const words = str.split(' ');
+//   const reserseArray = [];
+
+//   for (const word of words) {
+//     const letters = word.split('');
+//     const reverseLetters = [];
+
+//     for (const letter of letters) {
+//       reverseLetters.unshift(letter);
+//     }
+
+//     reserseArray.push(reverseLetters.join(''));
+//   }
+
+//   return reserseArray.join(' ');
+// }
+
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+
 //=======================================================
+// function bouncingBall(h, bounce, window) {
+//   if (h > 0, bounce > 0 && bounce < 1, window < h) {
+//     let count = 1;
+//     let bounces = h * bounce;
+
+//     while (window < bounces) {
+//       bounces = ;
+//     }
+//   }
+// }
+
+// console.log(bouncingBall(3.0, 0.66, 1.5));
+// console.log(bouncingBall(30.0, 0.66, 1.5));
 //=======================================================
 //=======================================================
 //=======================================================
