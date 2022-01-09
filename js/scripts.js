@@ -347,9 +347,26 @@
 // console.log(squareDigits(0));
 
 //=======================================================
-function isIsogram(str) {
-  //...
-}
+
+// function isIsogram(str) {
+//   const letters = str.toLowerCase().split('');
+//   const isogram = [];
+//   // console.log(`letters: `, letters);
+//   for (const letter of letters) {
+//     if (!isogram.includes(letter)) {
+//       isogram.push(letter);
+//     }
+//   }
+//   // console.log(`isogram: `, isogram);
+//   return isogram.length === letters.length ? true : false;
+// }
+
+// console.log(isIsogram('Dermatoglyphics'));
+// console.log(isIsogram('isogram'));
+// console.log(isIsogram('moOse'));
+// console.log(isIsogram('isIsogram'));
+// console.log(isIsogram(''));
+
 //=======================================================
 //=======================================================
 //=======================================================
