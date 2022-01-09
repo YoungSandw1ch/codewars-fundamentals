@@ -307,20 +307,27 @@
 // console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
 
 //=======================================================
-// function bouncingBall(h, bounce, window) {
-//   if (h > 0, bounce > 0 && bounce < 1, window < h) {
-//     let count = 1;
-//     let bounces = h * bounce;
+//=======================================================
 
-//     while (window < bounces) {
-//       bounces = ;
+// function bouncingBall(h, bounce, window) {
+//   let count = 1;
+//   let bounceHigh = h * bounce;
+
+//   if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
+//     while (window < bounceHigh) {
+//       bounceHigh *= bounce;
+//       count += 2;
 //     }
+
+//     return count;
 //   }
+
+//   return -1;
 // }
 
 // console.log(bouncingBall(3.0, 0.66, 1.5));
 // console.log(bouncingBall(30.0, 0.66, 1.5));
-//=======================================================
+// console.log(bouncingBall(0.9, 0.66, 1.5));
 //=======================================================
 //=======================================================
 //=======================================================
