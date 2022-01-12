@@ -150,16 +150,37 @@
 // console.log(expandedForm(70304));
 
 //===========Duplicate Encoder===========================
-// function duplicateEncode(word) {
-//   const letters = word.split('');
-//   const brackets = [];
+function duplicateEncode(word) {
+  const letters = word.split('');
+  const uniqLetters = [];
+  const repeatsLetters = [];
+  const newWord = [];
 
-//   for (let i = 0; i < letters.length; i += 1) {
-//     const letter = letters[i];
-//   }
-// }
+  letters.forEach(letter => {
+    if (!uniqLetters.includes(letter)) {
+      uniqLetters.push(letter);
+    } else {
+      repeatsLetters.push(letter);
+    }
 
-// console.log(duplicateEncode('recede'));
+    repeatsLetters.forEach(repeatsLetter => {
+      if (!letters.includes(repeatsLetter)) {
+        newWord.push('(');
+        console.log(newWord);
+      } else {
+        newWord.push(')');
+      }
+    });
+  });
+
+  console.log(letters);
+  console.log(uniqLetters);
+  console.log(repeatsLetters);
+
+  return newWord.join('');
+}
+
+console.log(duplicateEncode('recede'));
 //=======================================================
 //=======================================================
 //=======================================================
