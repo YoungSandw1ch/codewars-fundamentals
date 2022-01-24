@@ -367,10 +367,34 @@
 // console.log(isIsogram('isIsogram'));
 // console.log(isIsogram(''));
 
-//=======================================================
-//=======================================================
-//=======================================================
-//=======================================================
+//===============Sum of two lowest positive integers=====
+
+// function sumTwoSmallestNumbers(numbers) {
+//   const sortedNumbers = numbers.sort((a, b) => a - b);
+//   let total = 0;
+
+//   for (let i = 0; i < 2; i += 1) {
+//     total += sortedNumbers[i];
+//   }
+//   return total;
+// }
+//---сокращение------------------------
+// function sumTwoSmallestNumbers(numbers) {
+//   const sortedNumbers = numbers.sort((a, b) => a - b);
+//   return sortedNumbers[0] + sortedNumbers[1];
+// }
+
+// console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
+// console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]));
+// console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]));
+
+//==============Beginner Series1 School Paperwork========
+
+// function paperwork(n, m) {
+//   return (n < 0 || m < 0) ? 0 : n * m;
+// };
+
 //=======================================================
 //=======================================================
 //=======================================================

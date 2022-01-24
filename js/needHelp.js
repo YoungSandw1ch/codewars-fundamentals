@@ -181,6 +181,33 @@ function duplicateEncode(word) {
 }
 
 console.log(duplicateEncode('recede'));
+
+//================Consecutive strings====================
+
+// function longestConsec(strarr, k) {
+//   const n = strarr.length;
+//   if (n === 0 || k > n || k <= 0) {
+//     return '';
+//   }
+
+//   const concatenatingStrings = [];
+//   let element = '';
+
+//   for (let j = 0; j < n; j += 1) {
+
+//     while (j < k) {
+//       element += strarr[j];
+//     }
+
+//     concatenatingStrings.push({ element: element.length });
+//   }
+
+//   const biggest = Object.values(concatenatingStrings).sort((a, b) => b - a);
+//   return concatenatingStrings.find(string => string.length === biggest);
+// }
+
+// console.log(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 3));
+//=======================================================
 //=======================================================
 //=======================================================
 //=======================================================
