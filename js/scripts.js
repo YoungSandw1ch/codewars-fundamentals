@@ -395,7 +395,195 @@
 //   return (n < 0 || m < 0) ? 0 : n * m;
 // };
 
-//=======================================================
+/*
+ *=================Find the odd int======================
+ */
+
+// function findOdd(A) {
+//   let number = 0;
+//   const numbersWithQuantity = A.reduce(
+//     (acc, number) => ({
+//       ...acc,
+//       [number]: acc[number] ? acc[number] + 1 : 1,
+//     }),
+//     [],
+//   );
+//   // console.log(`numbersWithQuantity: `, numbersWithQuantity);
+
+//   for (const key in numbersWithQuantity) {
+//     // console.log(`numbersWithQuantity[key]: `, numbersWithQuantity[key]);
+
+//     if (numbersWithQuantity[key] % 2 !== 0) {
+//       number = key;
+//     }
+//   }
+//   return Number(number);
+// }
+/*
+ *----other variant---------------
+ */
+// function findOdd(A) {
+//   let object = {};
+//   console.log(`object number: `, object.number);
+
+//   A.forEach(number =>
+//     object[number] ? object[number] + 1 : (object[number] = 1),
+//   );
+//   console.log(`object: `, object);
+
+//   for (const key in object) {
+//     if (object[key] % 2 !== 0) {
+//       return Number(key);
+//     }
+//   }
+// }
+/*
+ *----BEST I EVER SEE VARIAN with XOR (побитовые операторы)
+ */
+
+// const findOdd = A => A.reduce((acc, number) => acc ^ number);
+
+// console.log(
+//   `result`,
+//   findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]),
+// );
+// console.log(`result`, findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]));
+// console.log(`result`, findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
+// console.log(`result`, findOdd([10]));
+// console.log(`result`, findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
+
+/*
+ *=========================Counting sheep...==========
+ */
+// const arrayOfSheep = [
+//   true,
+//   true,
+//   true,
+//   false,
+//   true,
+//   true,
+//   true,
+//   true,
+//   true,
+//   false,
+//   true,
+//   false,
+//   true,
+//   false,
+//   false,
+//   true,
+//   true,
+//   true,
+//   true,
+//   true,
+//   false,
+//   false,
+//   true,
+//   true,
+// ];
+
+// function countSheeps(arrayOfSheep) {
+//   return arrayOfSheep.reduce(
+//     (acc, sheep) => (sheep ? (acc += 1) : (acc += 0)),
+//     0,
+//   );
+// }
+
+/*
+ *------------------------other version--------------
+ */
+
+// const countSheeps = arrayOfSheep => arrayOfSheep.filter(sheep => sheep).length;
+// console.log(arrayOfSheep.filter(sheep => sheep));
+// console.log(arrayOfSheep.filter(Boolean));
+
+// console.log(countSheeps(arrayOfSheep));
+
+/*
+ *===============Growth of a Population=================
+ */
+
+// function nbYear(p0, percent, aug, p) {
+//   let p1 = p0;
+//   let count = 0;
+//   // console.log(p1);
+
+//   while (p1 < p) {
+//     count += 1;
+//     p1 = p1 + p1 * (percent / 100) + aug;
+//     // console.log(p1);
+//   }
+
+//   return count;
+// }
+
+// console.log(nbYear(1500, 5, 100, 5000));
+// console.log(nbYear(1500000, 2.5, 10000, 2000000));
+// console.log(nbYear(1500000, 0.25, 1000, 2000000));
+
+/*
+ *===================String repeat========================
+ */
+
+// function repeatStr(n, s) {
+//   let string = '';
+
+//   while (string.length / s.length < n) {
+//     string += s;
+//   }
+
+//   return string;
+// }
+
+/*
+ *------------smartest way----------------------
+ */
+
+// const repeatStr = (n, s) => s.repeat(n);
+
+// console.log(repeatStr(3, '*'));
+// console.log(repeatStr(5, '#'));
+// console.log(repeatStr(2, 'ha '));
+
+/*
+ *=======Write Number in Expanded Form===============
+ */
+
+// function expandedForm(number) {
+//   const string = String(number);
+//   let element = [];
+
+//   for (let i = 0; i < string.length; i += 1) {
+//     let part = string[i] * ('1' + '0'.repeat(string.length - 1 - [i]));
+//     // console.log(`part: `, part);
+//     if (part !== 0) {
+//       element.push(String(part));
+//       // console.log(element);
+//     }
+//   }
+
+//   return element.join(' + ');
+// }
+
+/*
+ *------code Wars solution-------
+ */
+// const expandedForm = number =>
+//   number
+//     .toString()
+//     .split('')
+//     .map(
+//       (element, index, array) => element + '0'.repeat(array.length - index - 1),
+//     )
+//     .filter(element => element != 0)
+//     .join(' + ');
+
+// console.log(String(70304).split(''));
+
+// console.log(expandedForm(12));
+// console.log(expandedForm(42));
+// console.log(expandedForm(70304));
+
 //=======================================================
 //=======================================================
 //=======================================================
