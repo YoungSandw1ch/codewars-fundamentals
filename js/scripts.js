@@ -578,11 +578,55 @@
 //     .filter(element => element != 0)
 //     .join(' + ');
 
-// console.log(String(70304).split(''));
+/*
+ *------i think it's the best solution-------
+ */
+
+// function expandedForm(num) {
+//   return [...String(num)]
+//     .map((n, i, a) => n * 10 ** (a.length - i - 1))
+//     .filter(Boolean)
+//     .join(` + `);
+// }
 
 // console.log(expandedForm(12));
 // console.log(expandedForm(42));
 // console.log(expandedForm(70304));
+
+/*
+ *==================Mexican Wave========================
+ */
+
+function wave(str) {
+  const array = [];
+  const strArray = str.split('');
+
+  for (let i = 0; i < str.length; i += 1) {
+    let copy = [...strArray];
+
+    if (copy[i] !== ' ') {
+      copy[i] = copy[i].toUpperCase();
+      array[i] = copy.join('');
+      // console.log(array[i]);
+    }
+
+    //   if (str[i] !== ' ') {
+    //     console.log(str[i]);
+    //     console.log(i);
+    //     console.log(str.replace(str[i], str[i].toUpperCase()));
+    //     array.push(str.replace(str[i], str[i].toUpperCase()));
+    //   }
+  }
+
+  return array.filter(a => a !== 'empty');
+}
+
+// console.log('codewars');
+// console.log(wave('codewars'));
+// console.log(wave('hello'));
+console.table(wave('two words'));
+console.table(wave(' gap '));
+// console.log(wave('aaa bbb'));
 
 //=======================================================
 //=======================================================
