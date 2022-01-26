@@ -597,40 +597,175 @@
  *==================Mexican Wave========================
  */
 
-function wave(str) {
-  const array = [];
-  const strArray = str.split('');
+// function wave(str) {
+//   const array = [];
+//   const strArray = str.split('');
 
-  for (let i = 0; i < str.length; i += 1) {
-    let copy = [...strArray];
+//   for (let i = 0; i < str.length; i += 1) {
+//     let copy = [...strArray];
 
-    if (copy[i] !== ' ') {
-      copy[i] = copy[i].toUpperCase();
-      array[i] = copy.join('');
-      // console.log(array[i]);
-    }
+//     if (copy[i] !== ' ') {
+//       copy[i] = copy[i].toUpperCase();
+//       array[i] = copy.join('');
+//       // console.log(array[i]);
+//     }
+//   }
 
-    //   if (str[i] !== ' ') {
-    //     console.log(str[i]);
-    //     console.log(i);
-    //     console.log(str.replace(str[i], str[i].toUpperCase()));
-    //     array.push(str.replace(str[i], str[i].toUpperCase()));
-    //   }
-  }
+//   return array.filter(a => a !== 'empty');
+// }
 
-  return array.filter(a => a !== 'empty');
-}
-
-// console.log('codewars');
 // console.log(wave('codewars'));
 // console.log(wave('hello'));
-console.table(wave('two words'));
-console.table(wave(' gap '));
+// console.table(wave('two words'));
+// console.table(wave(' gap '));
 // console.log(wave('aaa bbb'));
 
+/*
+ *========Beginner Series #3 Sum of Numbers==============
+ */
+
+// function getSum(a, b) {
+//   let sum = 0;
+
+//   if (a > b) {
+//     for (let i = b; i <= a; i += 1) {
+//       sum += i;
+//     }
+//     return sum;
+//   }
+
+//   if (a === b) {
+//     return a;
+//   }
+
+//   for (let i = a; i <= b; i += 1) {
+//     sum += i;
+//   }
+
+//   return sum;
+// }
+
+// console.log(getSum(0, -1));
+// console.log(getSum(0, 1));
+// console.log(getSum(0, 2));
+// console.log(getSum(-74, -347));
+
 //=======================================================
-//=======================================================
-//=======================================================
+// function getExtremeElements(array) {
+// array.splice(1, array.length - 2);
+// return array;
+
+// const newArray = [];
+// newArray.push(array.slice(0, 1));
+// newArray.push(array.slice(-1));
+// return newArray.flat();
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+/*
+ *====================Calculate average===================
+ */
+// const find_average = array =>
+//   array.length !== 0
+//     ? array.reduce((acc, item) => acc + item, 0) / array.length
+//     : 0;
+
+// console.log(find_average([1, 2, 3, 4, 5]));
+
+/*
+ *====================Simple multiplication==============
+ */
+
+// const simpleMultiplication = number =>
+//   number % 2 === 0 ? number * 8 : number * 9;
+
+// const simpleMultiplication = number => number * (number % 2 === 0 ? 8 : 9);
+
+/*
+ *==============Reversed sequence=========================
+ */
+
+// const reverseSeq = n => {
+//   const array = [n];
+
+//   while (n > 0) {
+//     n -= 1;
+//     if (n !== 0) {
+//       array.push(n);
+//     }
+//   }
+//   return array;
+// };
+
+/*
+ *-------------other version------------
+ */
+// const reverseSeq = num => {
+//   return new Array(num)
+//     .fill()
+//     .map((d, i) => i + 1)
+//     .reverse();
+// };
+
+// console.log(reverseSeq(15));
+
+/*
+ *==============Total amount of points===================
+ */
+
+// function points(games) {
+//   let array = [];
+
+//   games.forEach(element => {
+//     array.push(element.split(''));
+//   });
+
+//   // console.table(array);
+
+//   return array.reduce((acc, item) => {
+//     if (item[0] > item[2]) {
+//       acc += 3;
+//     } else if (item[0] === item[2]) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0);
+// }
+
+/*
+ *---выше такого нагородил, ужас )))
+ */
+
+// function points(games) {
+//   let total = 0;
+
+//   games.forEach(element => {
+//     // console.log(element[0], element[2]);
+//     // console.log(element[0] > element[2]);
+
+//     if (element[0] > element[2]) {
+//       total += 3;
+//     } else if (element[0] === element[2]) {
+//       total += 1;
+//     }
+//   });
+//   return total;
+// }
+
+console.log(
+  points([
+    '1:0',
+    '2:0',
+    '3:0',
+    '4:0',
+    '2:1',
+    '3:1',
+    '4:1',
+    '3:2',
+    '4:2',
+    '4:3',
+  ]),
+);
 //=======================================================
 //=======================================================
 //=======================================================
