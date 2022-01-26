@@ -752,20 +752,55 @@
 //   return total;
 // }
 
-console.log(
-  points([
-    '1:0',
-    '2:0',
-    '3:0',
-    '4:0',
-    '2:1',
-    '3:1',
-    '4:1',
-    '3:2',
-    '4:2',
-    '4:3',
-  ]),
-);
+// console.log(
+//   points([
+//     '1:0',
+//     '2:0',
+//     '3:0',
+//     '4:0',
+//     '2:1',
+//     '3:1',
+//     '4:1',
+//     '3:2',
+//     '4:2',
+//     '4:3',
+//   ]),
+// );
+
+/*
+ *===================Return Negative=====================
+ */
+
+// const makeNegative = (num) => num > 0 ? -num : num;
+
+/*
+ *============Count of positives / sum of negatives======
+ */
+
+// function countPositivesSumNegatives(input) {
+//   let countAndSum = [0];
+
+//   if (input === null || input.length === 0) {
+//     return [];
+//   }
+
+//   input.reduce((sum, item) => {
+//     if (item < 0) {
+//       sum += item;
+//     } else if (item > 0) {
+//       countAndSum[0] += 1;
+//     }
+//     return (countAndSum[1] = sum);
+//   }, 0);
+
+//   return countAndSum;
+// }
+
+// console.log(
+//   countPositivesSumNegatives([
+//     0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14,
+//   ]),
+// );
 //=======================================================
 //=======================================================
 //=======================================================
