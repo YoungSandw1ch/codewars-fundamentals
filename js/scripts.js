@@ -801,6 +801,48 @@
 //     0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14,
 //   ]),
 // );
+
+/*
+ *============Beginner - Reduce but Grow=================
+ */
+
+// const grow = x => x.reduce((acc, item) => acc * item);
+
+// console.log(grow([2, 2, 2, 2, 2, 2]));
+
+/*
+ *========================Keep Hydrated!=================
+ */
+// const litres = time => Math.floor(time / 2);
+
+// console.log(litres(12.3));
+// console.log(litres(1.4));
+// console.log(litres(11.8));
+
+/*
+ *==============The highest profit wins!=================
+ */
+
+// function minMax(arr) {
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+
+// console.log(minMax([1, 2, 3, 4, 5]));
+// console.log(minMax([2334454, 5]));
+
+/*
+ *==============How good are you really?=================
+ */
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   return classPoints.reduce((acc, point) => acc + point, yourPoints) /
+//     (classPoints.length + 1) <
+//     yourPoints
+//     ? false
+//     : true;
+// }
+
+// console.log(betterThanAverage([2, 3]));
 //=======================================================
 //=======================================================
 //=======================================================
