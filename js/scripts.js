@@ -949,15 +949,37 @@
 //   return bigest < smollest + smoll;
 // }
 /*
- *=================Find the unique number================
+ *=================Find the unique number=============ЗАМАНАЛСЯ С ЭТОЙ ЗАДАЧЕЙ
  */
+// const findUniq = arr => {
+//   const sortArr = arr.sort((a, b) => a - b);
+//   return sortArr[0] === sortArr[1] ? sortArr[sortArr.length - 1] : sortArr[0];
+// };
 
+//================================================
 // function findUniq(arr) {
-//   for (let i = 0; i < arr.length; i += 1) {
-//     if (arr[i] !== arr[i + 1]) {
-//       return arr[i];
+//   const sortedArray = arr.sort((a, b) => a - b);
+//   for (let i = 0; i < sortedArray.length; i += 1) {
+//     if (sortedArray[i] !== sortedArray[i + 1]) {
+//       return (
+//         sortedArray[0] + sortedArray[sortedArray.length - 1] - sortedArray[1]
+//       );
 //     }
 //   }
+// }
+
+// function findUniq(arr) {
+//   const sortedArray = arr.sort((a, b) => a - b);
+//   return Math.max(...sortedArray) + Math.min(...sortedArray) - sortedArray[2];
+// }
+
+// function findUniq(arr) {
+//   const sortedArray = arr.sort((a, b) => a - b);
+
+//   if (sortedArray[0] === sortedArray[1]) {
+//     return sortedArray[sortedArray.length - 1];
+//   }
+//   return sortedArray[0];
 // }
 
 // const findUniq = arr => {
@@ -968,19 +990,27 @@
 // };
 
 // function findUniq(arr) {
-//   return arr.filter((element, index, array) => );
+//   const sortedArray = arr.sort((a, b) => a - b);
+//   const uniqueArray = sortedArray.filter((element, index, array) => array.indexOf(element) === index);
+//   return
 // }
 
-console.log(findUniq([3, 10, 3, 3, 3]));
-console.log(findUniq([1, 1, 1, 2, 1, 1]));
-console.log(findUniq([1, 10, 10, 10, 10, 10]));
-console.log(findUniq([10, 10, 10, 10, 10, 1]));
-console.log(findUniq([10, 1, 1, 1, 1, 1]));
-console.log(findUniq([1, 1, 1, 1, 1, 10]));
+// console.log(findUniq([1, 0, 0]));
+// console.log(findUniq([3, 10, 3, 3, 3]));
+// console.log(findUniq([1, 1, 1, 2, 1, 1]));
+// console.log(findUniq([1, 10, 10, 10, 10, 10]));
+// console.log(findUniq([10, 10, 10, 10, 10, 1]));
+// console.log(findUniq([10, 1, 1, 1, 1, 1]));
+// console.log(findUniq([1, 1, 1, 1, 1, 10]));
+// console.log(findUniq([1e-6, 1e-7, 1e-6, 1e-6, 1e-6]));
 
 /*
- *=======================================================
+ *===============List Filtering=========================
  */
+// const filter_list = list => list.filter(e => Number.isInteger(e));
+// const filter_list = list => list.filter(e => typeof e === 'number');
+
+// console.log(filter_list([1, '1', 0.15, '0.22', 0]));
 /*
  *=======================================================
  */
