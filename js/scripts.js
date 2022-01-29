@@ -878,14 +878,42 @@
 // }
 
 /*
- *=======================================================
+ *=============Are You Playing Banjo?====================
  */
+
+// const areYouPlayingBanjo = x =>
+//   x[0].toLowerCase() === 'r' ? `${x} plays banjo` : `${x} does not play banjo`;
+
+// console.log(areYouPlayingBanjo('Ringo'));
+
 /*
- *=======================================================
+ *================Are they the "same"?===================
  */
+
+// function comp(array1, array2) {
+//   if (Boolean(array1) && Boolean(array2)) {
+//     const sortedArray1 = array1.sort((a, b) => a - b);
+//     const sortedArray2 = array2.sort((a, b) => a - b);
+
+//     return sortedArray1.every(
+//       (item, index) => sortedArray2[index] === Math.pow(item, 2),
+//     );
+//   }
+
+//   return false;
+// }
+
+// console.log(
+//   comp(
+//     [4, 5, 7, 7, 3, 5, 6, 5, 1, 7, 0, 8],
+//     [25, 25, 1, 64, 36, 0, 49, 16, 25, 50, 49, 9],
+//   ),
+// );
+
 /*
- *=======================================================
+ *===========You only need one - Beginner================
  */
+// const check = (a, x) => a.includes(x);
 /*
  *=======================================================
  */
