@@ -915,20 +915,69 @@
  */
 // const check = (a, x) => a.includes(x);
 /*
- *=======================================================
+ *=====================Invert values=====================
  */
+// const invert = array => array.map(i => -i);
+
+// console.log(invert([1, 2, 3, 4, 5]));
+// console.log(invert([1, -2, 3, -4, 5]));
 /*
- *=======================================================
+ *====================Even or Odd=======================
  */
+// const even_or_odd = num => num % 2 === 0 ? 'Even' : 'Odd';
 /*
- *=======================================================
+ *===================Returning Strings===================
  */
+// const greet = name => `Hello, ${name} how are you doing today?`;
 /*
- *=======================================================
+ *====================Is this a triangle?================
  */
+
+// const isTriangle = (a, b, c) => {
+//   if (a < 0 && b < 0 && c < 0) {
+//     return false
+//   }
+//   const p = (a + b + c) / 2;
+//   return Math.sqrt(p * (p - a) * (p - b) * (p - c)) > 0;
+// }
+
 /*
- *=======================================================
+ *-----------нормальный вариант
  */
+// const isTriangle = (a, b, c) => {
+//   [smollest, smoll, bigest] = [a, b, c].sort((a, b) => a - b);
+//   return bigest < smollest + smoll;
+// }
+/*
+ *=================Find the unique number================
+ */
+
+// function findUniq(arr) {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] !== arr[i + 1]) {
+//       return arr[i];
+//     }
+//   }
+// }
+
+// const findUniq = arr => {
+//   arr.reduce((acc, el, i) => {
+//     acc ^ el;
+//     return arr[i];
+//   });
+// };
+
+// function findUniq(arr) {
+//   return arr.filter((element, index, array) => );
+// }
+
+console.log(findUniq([3, 10, 3, 3, 3]));
+console.log(findUniq([1, 1, 1, 2, 1, 1]));
+console.log(findUniq([1, 10, 10, 10, 10, 10]));
+console.log(findUniq([10, 10, 10, 10, 10, 1]));
+console.log(findUniq([10, 1, 1, 1, 1, 1]));
+console.log(findUniq([1, 1, 1, 1, 1, 10]));
+
 /*
  *=======================================================
  */
