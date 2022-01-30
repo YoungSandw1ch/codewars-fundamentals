@@ -1012,11 +1012,29 @@
 
 // console.log(filter_list([1, '1', 0.15, '0.22', 0]));
 /*
- *=======================================================
+ *==============Find The Parity Outlier==================
  */
+
+// const findOutlier = integers =>
+//   integers.filter(el => el % 2 === 0).length > 1
+//     ? integers.find(el => el % 2 !== 0)
+//     : integers.find(el => el % 2 === 0);
+
+// console.log(findOutlier([0, 1, 2]));
+// console.log(findOutlier([1, 2, 3]));
+// console.log(findOutlier([2, 6, 8, 10, 3]));
+// console.log(findOutlier([0, 0, 3, 0, 0]));
+
 /*
  *=======================================================
  */
+
+// const message = 'JavaScript is in my blood';
+// let w = [...message.split(' ')];
+// console.log(w);
+// let e = w.length;
+// console.log(e);
+// console.log(message);
 /*
  *=======================================================
  */
