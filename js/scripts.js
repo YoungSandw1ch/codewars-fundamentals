@@ -1036,17 +1036,46 @@
 // console.log(e);
 // console.log(message);
 /*
- *=======================================================
+ *============Coding Meetup #11==========================
  */
+
+// const getAverageAge = list =>
+//   Math.round(list.reduce((acc, el) => acc + el.age, 0) / list.length);
 /*
  *=======================================================
  */
+// const remainder = (D, d) => D - (Math.floor(D / d) * d) ;
 /*
- *=======================================================
+ *============Adding remainders to a list================
  */
+// const solve = (nums, div) => nums.map(el =>
+//   el + (el - Math.floor(el / div) * div));
+
+//--или с использованием %
+// const solve = (nums, div) => nums.map(el => el + (el % div));
 /*
- *=======================================================
+ *===============Integer Difference======================
  */
+const intDiff = (arr, n) => {
+  const changedArray = arr.map(el => el - n);
+  console.log(changedArray);
+  let count = 0;
+  if (n === 0) {
+    console.log([...new Set(arr)]);
+    return arr.length - [...new Set(arr)].length;
+  }
+  for (const item of arr) {
+    for (const value of changedArray) {
+      if (item === value) {
+        count += 1;
+      }
+    }
+  }
+  return count;
+};
+// console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 4));
+console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 0));
+// console.log(intDiff([0], 4));
 /*
  *=======================================================
  */

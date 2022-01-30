@@ -114,52 +114,52 @@
 
 // =======Write Number in Expanded Form===============
 
-function expandedForm(number) {
-  const string = String(number);
-  let element = [];
+// function expandedForm(number) {
+//   const string = String(number);
+//   let element = [];
 
-  for (let i = 0; i < string.length; i += 1) {
-    let part = string[i] * Number('1' + '0'.repeat(string.length - 1 - [i]));
-    console.log(`part: `, part);
-    if (part !== 0) {
-      element.push(String(part));
+//   for (let i = 0; i < string.length; i += 1) {
+//     let part = string[i] * Number('1' + '0'.repeat(string.length - 1 - [i]));
+//     console.log(`part: `, part);
+//     if (part !== 0) {
+//       element.push(String(part));
 
-      console.log(element);
-    }
-  }
+//       console.log(element);
+//     }
+//   }
 
-  return element.join(' + ');
-  // let items = String(num).split('');
-  // console.log(items);
-  // let newNum = [];
-  // const expanded = [];
-  // for (let i = 0; i < items.length; i += 1) {
-  //   if (items[i] !== 0) {
-  //     newNum.push(items[i]);
-  //     while (newNum.length < items.length - 1) {
-  //       newNum.push('0');
-  //       newNum = newNum.push('0').join('');
-  //     }
-  //   }
-  // console.log(newNum);
-  // }
-  // newNum.push(items[0]);
-  // console.log(newNum);
-  // while (newNum.length < items.length) {
-  //   newNum.push('0');
-  // }
-  // expanded.push(newNum.join(''));
-  // console.log(newNum);
-  // console.log(expanded);
-  // newNum = num - Number(expanded);
-  // items = String(newNum).split('');
-  // console.log(newNum);
-  // console.log(items);
-}
+//   return element.join(' + ');
+// let items = String(num).split('');
+// console.log(items);
+// let newNum = [];
+// const expanded = [];
+// for (let i = 0; i < items.length; i += 1) {
+//   if (items[i] !== 0) {
+//     newNum.push(items[i]);
+//     while (newNum.length < items.length - 1) {
+//       newNum.push('0');
+//       newNum = newNum.push('0').join('');
+//     }
+//   }
+// console.log(newNum);
+// }
+// newNum.push(items[0]);
+// console.log(newNum);
+// while (newNum.length < items.length) {
+//   newNum.push('0');
+// }
+// expanded.push(newNum.join(''));
+// console.log(newNum);
+// console.log(expanded);
+// newNum = num - Number(expanded);
+// items = String(newNum).split('');
+// console.log(newNum);
+// console.log(items);
+// }
 
-console.log(expandedForm(12));
-console.log(expandedForm(42));
-console.log(expandedForm(70304));
+// console.log(expandedForm(12));
+// console.log(expandedForm(42));
+// console.log(expandedForm(70304));
 
 //===========Duplicate Encoder===========================
 // function duplicateEncode(word) {
@@ -220,6 +220,29 @@ console.log(expandedForm(70304));
 
 // console.log(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 3));
 //=======================================================
+// /*
+//  *===============Integer Difference======================
+//  */
+// const intDiff = (arr, n) => {
+//   const changedArray = arr.map(el => el - n);
+//   console.log(changedArray);
+//   let count = 0;
+//   if (n === 0) {
+//     console.log([...new Set(arr)]);
+//     return arr.length - [...new Set(arr)].length;
+//   }
+//   for (const item of arr) {
+//     for (const value of changedArray) {
+//       if (item === value) {
+//         count += 1;
+//       }
+//     }
+//   }
+//   return count;
+// };
+// // console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 4));
+// console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 0));
+// // console.log(intDiff([0], 4));
 //=======================================================
 //=======================================================
 //=======================================================
