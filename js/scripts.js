@@ -1056,35 +1056,84 @@
 /*
  *===============Integer Difference======================
  */
-const intDiff = (arr, n) => {
-  const changedArray = arr.map(el => el - n);
-  console.log(changedArray);
-  let count = 0;
-  if (n === 0) {
-    console.log([...new Set(arr)]);
-    return arr.length - [...new Set(arr)].length;
-  }
-  for (const item of arr) {
-    for (const value of changedArray) {
-      if (item === value) {
-        count += 1;
-      }
-    }
-  }
-  return count;
-};
+// const intDiff = (arr, n) => {
+//   const changedArray = arr.map(el => el - n);
+//   console.log(changedArray);
+//   let count = 0;
+//   if (n === 0) {
+//     console.log([...new Set(arr)]);
+//     return arr.length - [...new Set(arr)].length;
+//   }
+//   for (const item of arr) {
+//     for (const value of changedArray) {
+//       if (item === value) {
+//         count += 1;
+//       }
+//     }
+//   }
+//   return count;
+// };
 // console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 4));
-console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 0));
+// console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 0));
 // console.log(intDiff([0], 4));
 /*
- *=======================================================
+ *=============Money, Money, Money======================
  */
+// const calculateYears = (principal, interest, tax, desired) => {
+//   let years = 0;
+//   let toDesired = principal;
+
+//   while (toDesired < desired) {
+//     toDesired = toDesired + toDesired * interest - toDesired * interest * tax;
+//     years += 1;
+//   }
+
+//   return years;
+// };
+
 /*
- *=======================================================
+ *-----позорище не знающее логарифмы выше((
  */
+
+// function calculateYears(principal, interest, tax, desired) {
+//   return Math.ceil(
+//     Math.log(desired / principal) / Math.log(1 + interest * (1 - tax)),
+//   );
+// }
+
+// console.log(calculateYears(1000, 0.05, 0.18, 1100));
 /*
- *=======================================================
+ *=============Find the stray number=====================
  */
+// const stray = numbers => {
+//   const sNum = numbers.sort((a, b) => a - b);
+//   return sNum[0] + sNum[sNum.length - 1] - sNum[1];
+// };
+
+// const stray = numbers => {
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])) {
+//       return numbers[i];
+//     }
+//   }
+// };
+
+// console.log(stray([17, 17, 3, 17, 17, 17, 17]));
+/*
+ *===============Duplicate Encoder======================
+ */
+// function duplicateEncode(word) {
+//   const arr = [];
+
+//   [...word?.toLowerCase()].forEach((el, i, a) => {
+//     a.indexOf(el) === a.lastIndexOf(el) ? arr.push('(') : arr.push(')');
+//   });
+
+//   return arr.join('');
+// }
+// console.log(duplicateEncode('recede'));
+// console.log(duplicateEncode('(( @'));
+// console.log(duplicateEncode('Success'));
 /*
  *=======================================================
  */
