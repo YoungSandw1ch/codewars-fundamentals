@@ -1151,8 +1151,20 @@
 
 // console.log(solution(10));
 /*
- *=======================================================
+ *=================Tribonacci Sequence===================
  */
+// function tribonacci(signature, n) {
+//   const arr = [...signature];
+
+//   for (let i = 0; i < n - signature.length; i += 1) {
+//     arr.push(arr[i] + arr[i + 1] + arr[i + 2]);
+//   }
+//   return arr.slice(0, n);
+// }
+
+// console.log(tribonacci([1, 2, 3], 10));
+// console.log(tribonacci([1, 1, 1], 1));
+// console.log(tribonacci([1, 1, 1], 0));
 /*
  *=======================================================
  */
