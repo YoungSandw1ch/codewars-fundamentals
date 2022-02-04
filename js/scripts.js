@@ -1188,8 +1188,71 @@
 // console.log(getAllPropValues('price'));
 
 /*
- *=======================================================
+ *Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
  */
+// function sumDigPow(a, b) {
+//   const arr = [];
+//   for (let i = a; i < b; i++) {
+//     arr.push(i);
+//   }
+//   return arr.filter(el => {
+//     const array = String(el).split('');
+//     let sum = 0;
+
+//     for (let j = 0; j < array.length; j++) {
+//       sum += Math.pow(array[j], j + 1);
+
+//       if (sum === el) {
+//         return el;
+//       }
+//     }
+//   });
+// }
+
+/*
+ *-----another variant ------------------------------
+ */
+
+function sumDigPow(a, b) {
+  const arr = [];
+
+  for (let i = a; i < b; i++) {
+    arr.push(i);
+  }
+
+  // console.log(arr.map(el => String(el).split('')));
+  // console.log(
+  //   arr.map(el => String(el).split('')).filter(el => el === el[0] + el[1]),
+  // );
+  // console.log(
+  //   arr
+  //     .map(el => String(el).split(''))
+  //     .reduce((acc, item, i) => acc + Math.pow(item, i + 1), 0),
+  // );
+
+  return arr
+    .map(el => String(el).split(''))
+    .filter(
+      (el, i) =>
+        arr[i] === el.reduce((acc, item, i) => acc + Math.pow(item, i + 1), 0),
+    )
+    .map(el => Number(el.join('')));
+
+  // return arr.filter(el => {
+  //   const array = String(el).split('');
+  //   let sum = 0;
+
+  //   for (let j = 0; j < array.length; j++) {
+  //     sum += Math.pow(array[j], j + 1);
+
+  //     if (sum === el) {
+  //       return el;
+  //     }
+  //   }
+  // });
+}
+
+console.log(sumDigPow(1, 100));
 /*
  *=======================================================
  */
