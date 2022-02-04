@@ -1266,31 +1266,74 @@
 /*
  *====================Who likes it?======================
  */
-function likes(names) {
-  let message = '';
-  switch (names.length) {
-    case 0:
-      return 'no one likes this';
-    case 1:
-      return `${names[0]} likes this`;
-    case 2:
-      return `${names[0]} and ${names[1]} like this`;
-    case 3:
-      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-    default:
-      return `${names[0]}, ${names[1]} and ${
-        names.length - 2
-      } others like this`;
+// function likes(names) {
+//   switch (names.length) {
+//     case 0:
+//       return 'no one likes this';
+//     case 1:
+//       return `${names[0]} likes this`;
+//     case 2:
+//       return `${names[0]} and ${names[1]} like this`;
+//     case 3:
+//       return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+//     default:
+//       return `${names[0]}, ${names[1]} and ${
+//         names.length - 2
+//       } others like this`;
+//   }
+// }
+
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+/*
+ *===========Regular Ball Super Ball=====================
+ */
+// class Ball {
+//   constructor(ballType = 'regular') {
+//     this.ballType = ballType;
+//   }
+// }
+//===до того как пришли классы----------
+// var Ball = function (ballType = 'regular') {
+//   this.ballType = ballType;
+//   return this.ballType;
+// };
+
+// console.log(new Ball('super'));
+/*
+ *=======================================================
+ */
+class Song {
+  constructor(title, artist) {
+    this.title = title;
+    this.artist = artist;
+  }
+
+  listeners = [];
+
+  howMany(arr) {
+    let count = 0;
+    arr.forEach(p => {
+      if (!this.listeners.includes(p.toLowerCase())) {
+        this.listeners.push(p.toLowerCase());
+        count += 1;
+      }
+    });
+
+    return count;
   }
 }
 
-console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
-/*
- *=======================================================
- */
-/*
- *=======================================================
- */
+const newSong = new Song('Mount Moose', 'The Snazzy Moose');
+console.log(newSong);
+
+console.log(
+  `quantity: `,
+  newSong.howMany(['Amanda', 'CalEb', 'CarL', 'Furgus']),
+);
+console.log(
+  `quantity: `,
+  newSong.howMany(['Amanda', 'mango', 'Poly', 'Furgus']),
+);
 /*
  *=======================================================
  */
