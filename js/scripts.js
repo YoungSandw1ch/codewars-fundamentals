@@ -1300,43 +1300,72 @@
 
 // console.log(new Ball('super'));
 /*
- *=======================================================
+ *===========What a "Classy" Song=======================
  */
-class Song {
-  constructor(title, artist) {
-    this.title = title;
-    this.artist = artist;
-  }
+// class Song {
+//   #listeners = [];
 
-  listeners = [];
+//   constructor(title, artist) {
+//     this.title = title;
+//     this.artist = artist;
+//   }
 
-  howMany(arr) {
-    let count = 0;
-    arr.forEach(p => {
-      if (!this.listeners.includes(p.toLowerCase())) {
-        this.listeners.push(p.toLowerCase());
-        count += 1;
-      }
-    });
+//   // #listeners = [];
 
-    return count;
-  }
-}
+//   howMany(arr) {
+//     let count = 0;
 
-const newSong = new Song('Mount Moose', 'The Snazzy Moose');
-console.log(newSong);
+//     arr.forEach(p => {
+//       if (!this.#listeners.includes(p.toLowerCase())) {
+//         this.#listeners.push(p.toLowerCase());
+//         count += 1;
+//       }
+//     });
 
-console.log(
-  `quantity: `,
-  newSong.howMany(['Amanda', 'CalEb', 'CarL', 'Furgus']),
-);
-console.log(
-  `quantity: `,
-  newSong.howMany(['Amanda', 'mango', 'Poly', 'Furgus']),
-);
+//     return count;
+//   }
+// }
+
+// const newSong = new Song('Mount Moose', 'The Snazzy Moose');
+// console.log(newSong);
+
+// console.log(
+//   `quantity: `,
+//   newSong.howMany(['Amanda', 'CalEb', 'CarL', 'Furgus']),
+// );
+// console.log(
+//   `quantity: `,
+//   newSong.howMany(['Amanda', 'mango', 'Poly', 'Furgus']),
+// );
 /*
  *=======================================================
  */
+class God {
+  static create() {
+    class Man {
+      constructor(name = 'Adam') {
+        this.name = name;
+      }
+    }
+
+    class Woman {
+      constructor(name = 'Eve') {
+        this.name = name;
+      }
+    }
+
+    return [new Man(), new Woman()];
+  }
+}
+
+let humans = God.create();
+console.log(humans);
+console.log(humans[0] instanceof God);
+// const adam = new God('adam');
+// const eva = new God('eva');
+
+// console.log(adam);
+// console.log(eva);
 /*
  *=======================================================
  */
