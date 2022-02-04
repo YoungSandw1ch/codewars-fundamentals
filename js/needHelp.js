@@ -244,6 +244,58 @@
 // console.log(intDiff([1, 1, 5, 6, 9, 16, 27], 0));
 // // console.log(intDiff([0], 4));
 //=======================================================
+/*
+ *=======Numbers that are a power of their sum of digits==
+ */
+// function powerSumDigTerm(n) {
+//   const arr = [];
+
+//   for (let i = 81; i <= n; i++) {
+//     const sum = String(i)
+//       .split('')
+//       .reduce((acc, el, i, a) => acc + +el, 0);
+//     let a = i;
+//     console.log(sum);
+
+//     do {
+//       a = Math.sqrt(a);
+//       console.log(a);
+
+//       if (a === sum) {
+//         arr.push(i);
+//       }
+//     } while (a < sum);
+//   }
+
+//   return arr;
+//   if (i === String(i)
+//     .split('')
+//     .reduce((acc, el, i, a) => acc + +el, 0)) {}
+// }
+
+// console.log(String(n).split(''));
+// console.log(
+//   String(n)
+//     .split('')
+//     .reduce((acc, el, i, a) => acc + +el, 0),
+// );
+// const arr = [];
+// for (let i = a; i < b; i++) {
+//   do {
+//     arr.push(i);
+//   } while ()
+// }
+//   return (
+// String(n)
+//   .split('')
+//   .reduce((acc, el, i, a) => acc + +el, 0) ** String(n).split('').length
+//   );
+// }
+
+// console.log(powerSumDigTerm(81));
+// console.log(powerSumDigTerm(512));
+// console.log(powerSumDigTerm(2401));
+// console.log(powerSumDigTerm(4913));
 //=======================================================
 //=======================================================
 //=======================================================

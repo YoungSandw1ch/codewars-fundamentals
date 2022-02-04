@@ -1213,55 +1213,53 @@
  *-----another variant ------------------------------
  */
 
-function sumDigPow(a, b) {
-  const arr = [];
+// function sumDigPow(a, b) {
+//   const arr = [];
 
-  for (let i = a; i < b; i++) {
-    arr.push(i);
-  }
+//   for (let i = a; i < b; i++) {
+//     arr.push(i);
+//   }
 
-  // console.log(arr.map(el => String(el).split('')));
-  // console.log(
-  //   arr.map(el => String(el).split('')).filter(el => el === el[0] + el[1]),
-  // );
-  // console.log(
-  //   arr
-  //     .map(el => String(el).split(''))
-  //     .reduce((acc, item, i) => acc + Math.pow(item, i + 1), 0),
-  // );
+//   return arr
+//     .map(el => String(el).split(''))
+//     .filter(
+//       (el, i) =>
+//         arr[i] === el.reduce((acc, item, i) => acc + Math.pow(item, i + 1), 0),
+//     )
+//     .map(el => Number(el.join('')));
+// }
 
-  return arr
-    .map(el => String(el).split(''))
-    .filter(
-      (el, i) =>
-        arr[i] === el.reduce((acc, item, i) => acc + Math.pow(item, i + 1), 0),
-    )
-    .map(el => Number(el.join('')));
+// console.log(sumDigPow(1, 100));
 
-  // return arr.filter(el => {
-  //   const array = String(el).split('');
-  //   let sum = 0;
-
-  //   for (let j = 0; j < array.length; j++) {
-  //     sum += Math.pow(array[j], j + 1);
-
-  //     if (sum === el) {
-  //       return el;
-  //     }
-  //   }
-  // });
-}
-
-console.log(sumDigPow(1, 100));
 /*
- *=======================================================
+ *=============Stop gninnipS My sdroW!===================
  */
+// const spinWords = string =>
+//   string
+//     .split(' ')
+//     .map(el => (el.length >= 5 ? [...el].reverse().join('') : el))
+//     .join(' ');
+
+// console.log(spinWords('Hey fellow warriors'));
 /*
- *=======================================================
+ *==============Sum of Digits / Digital Root=============
  */
+// function digital_root(n) {
+//   while (String(n).length > 1) {
+//     n = [...String(n)].reduce((acc, el) => acc + +el, 0);
+//   }
+//   return n;
+// }
+
 /*
- *=======================================================
+ *----smartest thing i ever seen ------
  */
+
+// const digital_root = n => (n -1) % 9 + 1;
+// console.log(digital_root(16));
+// console.log(digital_root(942));
+// console.log(digital_root(493193));
+
 //=======================================================
 //=======================================================
 //=======================================================
