@@ -1420,9 +1420,18 @@
 // console.table(atTheOldToad.removePotion('Speed potion'));
 // console.table(atTheOldToad.removePotion('Dragon breath'));
 /*
- *=======================================================
+ *==============Count characters in your string==========
  */
+function count(string) {
+  const obj = {};
 
+  [...string].forEach((el, i, a) =>
+    a.indexOf(el) === i ? (obj[el] = 1) : (obj[el] += 1),
+  );
+  return obj;
+}
+
+console.log(count('aba'));
 /*
  *=======================================================
  */
