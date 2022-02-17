@@ -45,8 +45,12 @@
 // builder.padBoth('=');
 // console.log(builder.getValue()); // "=^.^="
 /*
- *=====================
+ *=====================Extract the domain name from a URL
  */
+function domainName(url) {}
+
+console.log(domainName('http://google.com'));
+console.log(domainName('www.xakep.ru'));
 /*
  *=====================
  */
