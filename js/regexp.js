@@ -139,32 +139,58 @@
 /*
  *====================Найдите пары BB-кодов
  */
-// let regexp = /\[.*\]/g;
-let regexp = /\[(b|url|quote)].*\[\/\1]/gs;
+// // let regexp = /\[.*\]/g;
+// let regexp = /\[(b|url|quote)].*\[\/\1]/gs;
 
-// let str = '..[url][b]http://ya.ru[/b][/url]..';
-let str = `
-[quote]
-  [b]текст[/b]
-[/quote]
-`;
-console.log(str.match(regexp)); // [url][b]http://ya.ru[/b][/url]
+// // let str = '..[url][b]http://ya.ru[/b][/url]..';
+// let str = `
+// [quote]
+//   [b]текст[/b]
+// [/quote]
+// `;
+// console.log(str.match(regexp)); // [url][b]http://ya.ru[/b][/url]
 /*
- *====================
+ *====================Найдите строки в кавычках
  */
+// // let regexp = /".*"/g;
+// let regexp = /"(\\.|[^"\\])*"/g;
 
+// const str = '.. "Скажи \\"Привет\\"!" ...';
+
+// console.log(str.match(regexp));
 /*
- *====================
+ *====================Найдите весь тег
  */
+// let regexp = /(\<[a-z]{5}\>)|(\<[a-z]{5}\s.*\>)/g;
+// let regexp = /\<style(>|\s.*>)/g;
 
+// console.log('<style> <styler> <style test="...">'.match(regexp)); // <style>, <style test="...">
 /*
- *====================
+ *====================Найдите неотрицательные целые
  */
+// // let regexp = /(?<!-)(?<!\d)\d+/g;
+// let regexp = /(?<![-\d])\d+/g;
 
+// let str = '0 12 -5 123 -18';
+
+// console.log(str.match(regexp)); // 0, 12, 123
 /*
- *====================
+ *====================Вставьте после фрагмента
  */
+// // let regexp = /(?<=<body.*?>)\n/;
+// let regexp = /(?<=<body.*?>)/;
 
+// let str = `
+// <html>
+//   <body style="height: 200px">
+//   ...
+//   </body>
+// </html>
+// `;
+
+// str = str.replace(regexp, `<h1>Hello</h1>`);
+
+// console.log(str);
 /*
  *====================
  */
