@@ -118,20 +118,37 @@
 
 // console.log(countDevelopers(list1));
 /*
- *====================Create Phone Number
- */
-const createPhoneNumber = numbers => numbers.join('');
-
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
-//"(123) 456-7890"
-/*
- *====================
- */
-// .match(/\(\d{3}\) \d{3}-\d{4}/)
-/*
- *====================
+ *====================Create Phone Number=====!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 
+// const createPhoneNumber = numbers => {
+//   numbers.replace();
+//   // .match(/\(\d{3}\) \d{3}-\d{4}/)
+// };
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+// //"1234567890"
+// //"(123) 456-7890"
+
+/*
+ *====================Найдите языки программирования
+ */
+// let regexp = /PHP|java(script)?|C(\+\+)?/gi;
+
+// console.log('Java JavaScript PHP C++ C'.match(regexp)); // Java JavaScript PHP C++ C
+/*
+ *====================Найдите пары BB-кодов
+ */
+// let regexp = /\[.*\]/g;
+let regexp = /\[(b|url|quote)].*\[\/\1]/gs;
+
+// let str = '..[url][b]http://ya.ru[/b][/url]..';
+let str = `
+[quote]
+  [b]текст[/b]
+[/quote]
+`;
+console.log(str.match(regexp)); // [url][b]http://ya.ru[/b][/url]
 /*
  *====================
  */
