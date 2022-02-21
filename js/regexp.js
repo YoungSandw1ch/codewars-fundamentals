@@ -224,9 +224,17 @@
 // console.log(removeParentheses('(first group) (second group) (third group)'));
 
 /*
- *====================
+ *====================Password should not contain any part of your username.
  */
+const validate = (username, password) => {
+  const match = username.match(//);
+  console.log(match);
+};
 
+console.log(validate('username', 'myname'));
+console.log(validate('sword', 'password'));
+console.log(validate('MASH', 'M*A*S*H'));
+console.log(validate('asdfghjkl', 'lkjhgfdsa'));
 /*
  *====================
  */
