@@ -196,15 +196,47 @@
 /*
  *====================
  */
+// let str = '<h1>Hello, world!</h1>';
+// let regexp = /<(.*?)>/g;
+
+// let matchAll = str.matchAll(regexp);
+
+// console.log(matchAll); // [object RegExp String Iterator], не массив, а перебираемый объект
+
+// matchAll = Array.from(matchAll); // теперь массив
+// console.log(matchAll);
+
+// let firstMatch = matchAll[0];
+// console.log(firstMatch[0]);
+// console.log(firstMatch[1]);
 
 /*
- *====================
+ *====================Remove the parentheses!!!!не решил изначально
  */
+// const removeParentheses = s =>
+//   s.includes('(') ? removeParentheses(s.replace(/\([^()]*?\)/g, '')) : s;
+
+// console.log(removeParentheses('a (bc d)e'));
+// console.log(removeParentheses('a(b(c))'));
+// console.log(removeParentheses(' (b(c)) '));
+// console.log(
+//   removeParentheses('hello example (words(more words) here) something'),
+// );
+// console.log(removeParentheses('example(unwanted thing)example'));
+// console.log(removeParentheses('(first group) (second group) (third group)'));
 
 /*
- *====================
+ *====================Password should not contain any part of your username.
  */
+const validate = (username, password) => {
+  const match = username.match(//);
+  console.log(match);
+};
 
+console.log(validate('username', 'myname'));
+console.log(validate('sword', 'password'));
+console.log(validate('MASH', 'M*A*S*H'));
+console.log(validate('asdfghjkl', 'lkjhgfdsa'));
 /*
  *====================
  */
