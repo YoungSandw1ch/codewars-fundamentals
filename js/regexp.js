@@ -229,7 +229,7 @@
  *====================Password should not contain any part of your username.
  */
 const validate = (username, password) => {
-  const match = username.match(//);
+  // const match = username.match(//);
   console.log(match);
 };
 
