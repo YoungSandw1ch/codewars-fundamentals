@@ -1443,9 +1443,18 @@
  */
 // const cockroachSpeed = (s) => s * 100 / 36;
 /*
- *=======================================================
+ *============Find the next perfect square!==============
  */
+// const findNextSquare = sq => {
+//   console.log(Math.sqrt(sq));
+//   if (Number.isInteger(Math.sqrt(sq))) {
+//     // console.log(Math.pow(sq));
+//     return Math.pow(Math.sqrt(sq) + 1, 2);
+//   }
+//   return -1;
+// };
 
+// console.log(findNextSquare(121));
 /*
  *=======================================================
  */
