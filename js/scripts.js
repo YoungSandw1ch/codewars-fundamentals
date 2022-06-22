@@ -1606,11 +1606,79 @@
 // console.log(solution(715));
 
 /*
- *=======================================================
+ *===============For whom the Bell tolls=================
  */
+
+// const bell = n => {
+//   // let adder = n;
+//   // const neededArr = [];
+//   // let middle = 0;
+
+//   // for (let i = 0; i < n; i += 1) {
+//   //   neededArr.push(middle + adder);
+//   //   middle = neededArr[i];
+//   //   adder -= 2;
+//   // }
+
+//   // return neededArr;
+
+//   return Array.from({ length: n }, (el, i) => (n - i) * (i + 1));
+// };
+
+// console.log(bell(10)); //10 18 24 2
+// console.log(bell(3));
+// console.log(bell(2));
 /*
- *=======================================================
+ *===============What's your running pace?===============
  */
+// const runningPace = (distance, time) => {
+//   const arr = time.split(':');
+// const minutes = (+arr[1] / 60 + +arr[0]) / distance;
+
+// if (time <= 0 || distance <= 0) {
+//   return '0:00';
+// }
+// if (Number.isInteger(minutes)) {
+//   return `${minutes}:00`;
+// } else {
+//   const float = minutes.toString().split('.');
+//   console.log('float: ', float);
+
+//   if ((minutes - float[0]) * 60 > 10) {
+//     return `${float[0]}:${Math.floor((minutes - float[0]) * 60)}`;
+//   } else {
+//     console.log((minutes - float[0]) * 60);
+//     return `${float[0]}:0${Math.floor((minutes - float[0]) * 60)}`;
+//   }
+// }
+// };
+
+function runningPace(distance, time) {
+  const arr = time.split(':');
+
+  const minutes = (+arr[0] * 60 + +arr[1]) / distance;
+  if (Math.floor(minutes % 60) < 10) {
+    return `${Math.floor(minutes / 60)}:0${Math.floor(minutes % 60)}`;
+  }
+  return `${Math.floor(minutes / 60)}:${Math.floor(minutes % 60)}`;
+
+  // const seconds = +arr[0] * 60 + +arr[1];
+  // let perKm = seconds / distance;
+  // let minute = Math.floor(perKm / 60);
+  // let sec = Math.floor(perKm % 60);
+  // if (sec < 10) {
+  //   sec = '0' + sec;
+  // }
+
+  // return minute + ':' + sec;
+}
+
+console.log(runningPace(4.99, '22:32')); //4:30
+// console.log(runningPace(5, '25:00'));
+// console.log(runningPace(15, '75:00'));
+// console.log(runningPace(2.51, '10:43')); //4:16
+// console.log(runningPace(0.2, '0:38')); //3:10
+// console.log(runningPace(42.195, '122:57')); //2:54
 /*
  *=======================================================
  */
