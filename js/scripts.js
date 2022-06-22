@@ -1456,24 +1456,155 @@
 
 // console.log(findNextSquare(121));
 /*
- *=======================================================
+ *======================Opposite number==================
  */
+// const opposite = number => (number *= -1);
 /*
- *=======================================================
+ *==================Highest and Lowest===================
  */
+// const highAndLow = numbers => {
+//   const arr = numbers.split(' ').map(number => +number);
+//   return `${Math.max(...arr)} ${Math.min(...arr)}`;
+// };
+
+// const highAndLow = numbers => {
+//   const arr = numbers.split(' ');
+//   return `${Math.max.apply(0, arr)} ${Math.min.apply(0, arr)}`;
+// };
+
+// console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
 /*
- *=======================================================
+ *=================Get the Middle Character==============
  */
+// const getMiddle = s => {
+//   const l = s.length;
+
+//   if (l % 2 === 0) {
+//     return s[l / 2 - 1] + s[l / 2];
+//   } else {
+//     return s[Math.floor(l / 2)];
+//   }
+// };
+
+// const getMiddle = s =>
+//   s.length % 2 === 0
+//     ? s[s.length / 2 - 1] + s[s.length / 2]
+//     : s[Math.floor(s.length / 2)];
+
+// console.log(getMiddle('testus'));
+// console.log(getMiddle('tesus'));
 /*
- *=======================================================
+ *==========================Count by X===================
  */
+// function countBy(x, n) {
+//   let z = [];
+
+//   for (let i = 0, j = x; i < n; i += 1, j += x) {
+//     z.push(j);
+//   }
+
+//   return z;
+// }
+
+// const countBy = (x, n) => Array.from({ length: n }, (el, i) => (i + 1) * x);
+
+// console.log(countBy(2, 5));
 /*
- *=======================================================
+ *================8 inch pizza equivalence===============
  */
+// const howManyPizzas = n => {
+//   const customPizzaArea = Math.PI * Math.pow(8 / 2, 2);
+//   const pizzaSlice = customPizzaArea / 8;
+//   const numSlices = Math.round((Math.PI * Math.pow(n / 2, 2)) / pizzaSlice);
+
+//   return `pizzas: ${Math.floor(numSlices / 8)}, slices: ${numSlices % 8}`;
+// };
+
+// console.log(howManyPizzas(16));
+// console.log(howManyPizzas(6));
+/*
+ *===============Roman Numerals Encoder==================
+ */
+// const solution = number => {
+//   const pareOfNumbers = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
+//   const result = '';
+
+//   for (const roman in pareOfNumbers) {
+//     while (number >= pareOfNumbers[roman]) {
+//       result += roman;
+//       number -= pareOfNumbers[roman];
+//     }
+//   }
+//   return result;
+// };
 
 /*
- *=======================================================
+ *--------------other solution-----
  */
+
+// const solution = number => {
+//   const roman = [
+//     'M',
+//     'CM',
+//     'D',
+//     'CD',
+//     'C',
+//     'XC',
+//     'L',
+//     'XL',
+//     'X',
+//     'IX',
+//     'V',
+//     'IV',
+//     'I',
+//   ];
+//   const integers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+//   let result = '';
+
+//   for (let i = 0; i < integers.length; i += 1) {
+//     while (number >= integers[i]) {
+//       number -= integers[i];
+//       result += roman[i];
+//     }
+//   }
+//   return result;
+// };
+
+/*
+ *--------------other solution-----
+ */
+
+// const solution = number => {
+//   const roman = [
+//     'M',
+//     'CM',
+//     'D',
+//     'CD',
+//     'C',
+//     'XC',
+//     'L',
+//     'XL',
+//     'X',
+//     'IX',
+//     'V',
+//     'IV',
+//     'I',
+//   ];
+//   const integers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+
+//   return integers.reduce((acc, el, i) => {
+//     while (number >= el) {
+//       number -= el;
+//       acc += roman[i];
+//     }
+//     return acc;
+//   }, '');
+// };
+
+// console.log(solution(2642)); //MMDCXLII MMDCXLII
+// console.log(solution(2242));
+// console.log(solution(715));
+
 /*
  *=======================================================
  */
