@@ -1631,57 +1631,50 @@
 /*
  *===============What's your running pace?===============
  */
-// const runningPace = (distance, time) => {
+// function runningPace(distance, time) {
 //   const arr = time.split(':');
-// const minutes = (+arr[1] / 60 + +arr[0]) / distance;
 
-// if (time <= 0 || distance <= 0) {
-//   return '0:00';
-// }
-// if (Number.isInteger(minutes)) {
-//   return `${minutes}:00`;
-// } else {
-//   const float = minutes.toString().split('.');
-//   console.log('float: ', float);
-
-//   if ((minutes - float[0]) * 60 > 10) {
-//     return `${float[0]}:${Math.floor((minutes - float[0]) * 60)}`;
-//   } else {
-//     console.log((minutes - float[0]) * 60);
-//     return `${float[0]}:0${Math.floor((minutes - float[0]) * 60)}`;
+//   const minutes = (+arr[0] * 60 + +arr[1]) / distance;
+//   if (Math.floor(minutes % 60) < 10) {
+//     return `${Math.floor(minutes / 60)}:0${Math.floor(minutes % 60)}`;
 //   }
+//   return `${Math.floor(minutes / 60)}:${Math.floor(minutes % 60)}`;
 // }
-// };
 
-function runningPace(distance, time) {
-  const arr = time.split(':');
-
-  const minutes = (+arr[0] * 60 + +arr[1]) / distance;
-  if (Math.floor(minutes % 60) < 10) {
-    return `${Math.floor(minutes / 60)}:0${Math.floor(minutes % 60)}`;
-  }
-  return `${Math.floor(minutes / 60)}:${Math.floor(minutes % 60)}`;
-
-  // const seconds = +arr[0] * 60 + +arr[1];
-  // let perKm = seconds / distance;
-  // let minute = Math.floor(perKm / 60);
-  // let sec = Math.floor(perKm % 60);
-  // if (sec < 10) {
-  //   sec = '0' + sec;
-  // }
-
-  // return minute + ':' + sec;
-}
-
-console.log(runningPace(4.99, '22:32')); //4:30
+// console.log(runningPace(4.99, '22:32')); //4:30
 // console.log(runningPace(5, '25:00'));
 // console.log(runningPace(15, '75:00'));
 // console.log(runningPace(2.51, '10:43')); //4:16
 // console.log(runningPace(0.2, '0:38')); //3:10
 // console.log(runningPace(42.195, '122:57')); //2:54
 /*
- *=======================================================
+ *============Take a Ten Minutes Walk====================
  */
+const isValidWalk = walk => {
+  // const [n, s, e, w] = [1, -1, 1, -1];
+  let [x, y] = [0, 0];
+
+  walk.forEach(el => {
+    switch (el) {
+      case 'n':
+        x += 1;
+        break;
+      case 's':
+        x -= 1;
+        break;
+      case 'e':
+        y += 1;
+        break;
+      case 'w':
+        y -= 1;
+        break;
+    }
+  });
+
+  return x === 0 && y === 0 ? true : false;
+};
+
+console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
 /*
  *=======================================================
  */
