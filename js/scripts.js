@@ -1650,34 +1650,60 @@
 /*
  *============Take a Ten Minutes Walk====================
  */
-const isValidWalk = walk => {
-  // const [n, s, e, w] = [1, -1, 1, -1];
-  let [x, y] = [0, 0];
+// const isValidWalk = walk => {
+//   let [x, y] = [0, 0];
 
-  walk.forEach(el => {
-    switch (el) {
-      case 'n':
-        x += 1;
-        break;
-      case 's':
-        x -= 1;
-        break;
-      case 'e':
-        y += 1;
-        break;
-      case 'w':
-        y -= 1;
-        break;
-    }
-  });
+//   walk.forEach(el => {
+//     switch (el) {
+//       case 'n': x += 1; break;
+//       case 's': x -= 1; break;
+//       case 'e': y += 1; break;
+//       case 'w': y -= 1; break;
+//     }
+//   });
 
-  return x === 0 && y === 0 ? true : false;
-};
+//   return x === 0 && y === 0 && walk.length === 10 ? true : false;
+// };
 
-console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
+// console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
+// console.log(
+//   isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']),
+// );
 /*
- *=======================================================
+ *=================Counting Duplicates===================
  */
+// const duplicateCount = text => {
+//   const dubl = [];
+//   text
+//     .toLowerCase()
+//     .split('')
+//     .forEach((el, i, arr) => {
+//       if (arr.indexOf(el) !== i && !dubl.includes(el)) {
+//         dubl.push(el);
+//       }
+//     });
+//   return dubl.length;
+// };
+
+/*
+ *-----------shortest-method----------------
+ */
+
+// const duplicateCount = text => {
+//   return text
+//     .toLowerCase()
+//     .split('')
+//     .reduce((acc, el, i, arr) => {
+//       if (arr.indexOf(el) !== i && !acc.includes(el)) {
+//         acc.push(el);
+//       }
+//       return acc;
+//     }, []).length;
+// };
+
+// console.log(duplicateCount('aabBcde'));
+// console.log(duplicateCount(''));
+// console.log(duplicateCount('Indivisibilities'));
 /*
  *=======================================================
  */
