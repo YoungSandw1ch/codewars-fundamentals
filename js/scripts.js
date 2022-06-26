@@ -1858,15 +1858,19 @@ const ref = {
 //   return iterable[0] ? arr : [];
 // };
 
-const uniqueInOrder = iterable => {
-  const arrFromIterable = Array.isArray(iterable)
-    ? iterable
-    : iterable.split('');
+// const uniqueInOrder = iterable => {
+//   const arrFromIterable = Array.isArray(iterable)
+//     ? iterable
+//     : iterable.split('');
 
-  return arrFromIterable.reduce((acc, el) => {
-    if (acc[acc.length - 1] !== el) acc.push(el);
-    return acc;
-  }, []);
+//   return arrFromIterable.reduce((acc, el) => {
+//     if (acc[acc.length - 1] !== el) acc.push(el);
+//     return acc;
+//   }, []);
+// };
+
+const uniqueInOrder = iterable => {
+  return [...iterable].filter((el, i, arr) => arr[i - 1] !== el);
 };
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB'));
