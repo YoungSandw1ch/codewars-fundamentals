@@ -1869,16 +1869,31 @@ const ref = {
 //   }, []);
 // };
 
-const uniqueInOrder = iterable => {
-  return [...iterable].filter((el, i, arr) => arr[i - 1] !== el);
-};
+// const uniqueInOrder = iterable => {
+//   return [...iterable].filter((el, i, arr) => arr[i - 1] !== el);
+// };
 
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-console.log(uniqueInOrder([]));
-console.log(uniqueInOrder([1, 1, 2, 3, 3, 3, 4, 4, 4, 1, 1, 2, 2]));
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+// console.log(uniqueInOrder([]));
+// console.log(uniqueInOrder([1, 1, 2, 3, 3, 3, 4, 4, 4, 1, 1, 2, 2]));
 /*
- *=======================================================
+ *======================Find the missing letter==========
  */
+// const findMissingLetter = array => {
+//   const alphabet = Array.from({ length: 26 }, (_, i) =>
+//     String.fromCharCode(65 + i),
+//   );
+//   const lowerKeyAbc = alphabet.join('').toLowerCase().split('');
+//   const variableAbc =
+//     array[0].toUpperCase() === array[0] ? alphabet : lowerKeyAbc;
+//   const start = variableAbc.indexOf(array[0]);
+//   const newArray = [...variableAbc].splice(start, array.length + 1);
+
+//   return newArray.filter(el => !array.includes(el))[0];
+// };
+
+// console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
+// console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
 /*
  *=======================================================
  */
