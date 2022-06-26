@@ -1840,8 +1840,38 @@ const ref = {
 // console.log(toCamelCase(''));
 // console.log(toCamelCase('A-B-C'));
 /*
- *=======================================================
+ *=================Unique In Order=======================
  */
+
+// const uniqueInOrder = iterable => {
+//   const arr = [iterable[0]];
+//   const arrFromIterable = Array.isArray(iterable)
+//     ? iterable
+//     : iterable.split('');
+
+//   arrFromIterable.forEach(el => {
+//     if (arr[arr.length - 1] !== el) {
+//       arr.push(el);
+//     }
+//   });
+
+//   return iterable[0] ? arr : [];
+// };
+
+const uniqueInOrder = iterable => {
+  const arrFromIterable = Array.isArray(iterable)
+    ? iterable
+    : iterable.split('');
+
+  return arrFromIterable.reduce((acc, el) => {
+    if (acc[acc.length - 1] !== el) acc.push(el);
+    return acc;
+  }, []);
+};
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+console.log(uniqueInOrder([]));
+console.log(uniqueInOrder([1, 1, 2, 3, 3, 3, 4, 4, 4, 1, 1, 2, 2]));
 /*
  *=======================================================
  */
