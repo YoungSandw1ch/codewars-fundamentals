@@ -1766,34 +1766,56 @@ const ref = {
   '-----': '0',
 };
 
-const decodeMorse = morseCode =>
-  // morseCode
-  //   .split(' ')
-  //   .map(el => ref[el])
-  //   .join(' ')
-  //   .replaceAll('   ', '+')
-  //   .replaceAll(' ', '')
-  //   .replaceAll('+', ' ');
-  /*
-   *----------------------------------------
-   */
-  morseCode
-    .split('   ')
-    .map(el =>
-      el
-        .split(' ')
-        .map(el => ref[el])
-        .join(''),
-    )
-    .join(' ')
-    .trim();
-
-console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
-console.log(decodeMorse('.   .'));
-console.log(decodeMorse('... --- ...'));
+// const decodeMorse = morseCode =>
+// morseCode
+//   .split(' ')
+//   .map(el => ref[el])
+//   .join(' ')
+//   .replaceAll('   ', '+')
+//   .replaceAll(' ', '')
+//   .replaceAll('+', ' ');
 /*
- *=======================================================
+ *----------------------------------------
  */
+// morseCode
+//   .split('   ')
+//   .map(el =>
+//     el
+//       .split(' ')
+//       .map(el => ref[el])
+//       .join(''),
+//   )
+//   .join(' ')
+//   .trim();
+
+/*
+ *---not my solution----------
+ */
+//   morseCode
+//     .trim()
+//     .split(/  | /)
+//     .map(code => ref[code] || ' ')
+//     .join('');
+
+// console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
+// console.log(decodeMorse('.   .'));
+// console.log(decodeMorse('... --- ...'));
+/*
+ *==================Playing with digits==================
+ */
+// const digPow = (n, p) => {
+//   const k =
+//     n
+//       .toString()
+//       .split('')
+//       .reduce((acc, el, i) => acc + Math.pow(el, p + i), 0) / n;
+
+//   return Number.isInteger(k) ? k : -1;
+// };
+
+// console.log(digPow(89, 1));
+// console.log(digPow(92, 1));
+// console.log(digPow(46288, 3));
 /*
  *=======================================================
  */
