@@ -1817,8 +1817,28 @@ const ref = {
 // console.log(digPow(92, 1));
 // console.log(digPow(46288, 3));
 /*
- *=======================================================
+ *===============Convert string to camel case============
  */
+// const toCamelCase = str => {
+// const arr = str.split(/\_|\-/);
+// const newArray = [arr[0]];
+// for (let i = 1; i < arr.length; i += 1) {
+//   const word = arr[i];
+//   newArray.push(word.replace(word[0], word[0].toUpperCase()));
+// }
+// return newArray.join('');
+//====================================================
+// return str.replace(/[_-](.)/g, (_, a) => {
+//   // console.log(_);
+//   // console.log(a);
+//   return a.toUpperCase();
+// });
+// };
+
+// console.log(toCamelCase('the_stealth_warrior'));
+// console.log(toCamelCase('The-Stealth-Warrior'));
+// console.log(toCamelCase(''));
+// console.log(toCamelCase('A-B-C'));
 /*
  *=======================================================
  */
