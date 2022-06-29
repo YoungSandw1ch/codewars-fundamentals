@@ -1934,8 +1934,62 @@ const ref = {
 // console.log(winner(['A', '7', '8'], ['K', '5', '9']));
 // console.log(winner(['T'], ['T']));
 /*
- *=======================================================
+ *==Split all even numbers to odd ones in different ways=
  */
+// const splitAllEvenNumbers = (numbers, way) => {
+//   const $0 = number => {
+//     if (number % 2 === 0) {
+//       let half = number / 2;
+//       if (half % 2 !== 0) {
+//         return [half, half];
+//       }
+//       return [half - 1, half + 1];
+//     }
+//     return number;
+//   };
+
+//   const $1 = number => {
+//     if (number % 2 === 0) {
+//       return [1, number - 1];
+//     }
+//     return number;
+//   };
+
+//   const $2 = number => {
+//     let halfedNum = number;
+
+//     if (number % 2 === 0) {
+//       do {
+//         halfedNum /= 2;
+//       } while (halfedNum % 2 === 0);
+
+//       return Array(number / halfedNum).fill(halfedNum);
+//     }
+//     return number;
+//   };
+
+//   const $3 = number => {
+//     if (number % 2 === 0) {
+//       return Array.from({ length: number }, (_, __) => 1);
+//     }
+//     return number;
+//   };
+
+//   const methods = [$0, $1, $2, $3];
+//   return numbers.flatMap(el => methods[way](el));
+// };
+
+// console.log(splitAllEvenNumbers([1, 10, 1, 3], 0));
+// console.log(splitAllEvenNumbers([1, 10, 1, 3], 1));
+// console.log(splitAllEvenNumbers([1, 10, 1, 3], 2));
+// console.log(splitAllEvenNumbers([1, 10, 1, 3], 3));
+
+// console.log(splitAllEvenNumbers([1, 1, 3, 8], 0));
+// console.log(splitAllEvenNumbers([1, 1, 3, 8], 1));
+// console.log(splitAllEvenNumbers([1, 1, 3, 8], 2));
+// console.log(splitAllEvenNumbers([1, 1, 3, 8], 3));
+
+// console.log(splitAllEvenNumbers([12], 2));
 /*
  *=======================================================
  */
