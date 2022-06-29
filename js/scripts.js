@@ -2044,8 +2044,53 @@ const ref = {
 // console.log(groupIn10s());
 // console.log(groupIn10s(900, 300, 22));
 /*
- *=======================================================
+ *=========Simplify Compound Fractions===================
  */
+// function simplify(i, num, den) {
+//   const result = [i + ~~(num / den), 0, 0];
+
+//   let a = num % den;
+//   let b = a === 0 ? 0 : den;
+
+//   if (a === 0 || b === 0) {
+//     return [i + ~~(num / den), 0, 0];
+//   }
+
+//   if (Number.isInteger(b / a)) {
+//     result[1] = b / a - a;
+//     result[2] = b / a;
+//   } else {
+//     result[1] = a / (b - a);
+//     result[2] = b / (b - (num % den));
+//   }
+
+//   return result;
+// }
+/*
+ *--------херь которую я написал выше---------------
+ */
+
+const simplify = (i, num, den) => {
+  const arr = [i + ~~(num / den), 0, 0];
+
+  for (let i = 2; i < num; i += 1) {
+    if (num % den === 0) return arr;
+    if (num % i === 0 && den % i === 0) {
+      arr[1] = num / i;
+      arr[2] = den / i;
+    }
+  }
+
+  return arr;
+};
+
+console.log(simplify(4, 3, 2));
+console.log(simplify(0, 15, 12));
+console.log(simplify(0, 11, 12));
+console.log(simplify(0, 36, 40));
+console.log(simplify(2, 6, 9));
+console.log(simplify(2, 14, 21));
+console.log(simplify(0, 32, 16));
 /*
  *=======================================================
  */
