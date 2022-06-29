@@ -1991,8 +1991,15 @@ const ref = {
 
 // console.log(splitAllEvenNumbers([12], 2));
 /*
- *=======================================================
+ *===============How Many Reindeers?=====================
  */
+// const reindeers = presents =>
+//   presents <= 180 ? Math.ceil(presents / 30) + 2 : error;
+
+// console.log(reindeers(0));
+// console.log(reindeers(1));
+// console.log(reindeers(30));
+// console.log(reindeers(200));
 /*
  *=======================================================
  */
