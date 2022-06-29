@@ -2001,9 +2001,48 @@ const ref = {
 // console.log(reindeers(30));
 // console.log(reindeers(200));
 /*
- *=======================================================
+ *====================Group in 10s=======================
  */
+// const groupIn10s = (...arg) => {
+//   const arr = [];
+//   const sortArg = arg.sort((a, b) => a - b);
+//   let number = arg.length;
 
+//   if (number === 0) return arr;
+
+//   for (let i = 1; i <= Infinity; i += 1) {
+//     const filtered = sortArg.filter(el => el / (10 * i) < 1);
+
+//     if (filtered.length === 0) {
+//       arr.push(undefined);
+//     } else {
+//       arr.push(filtered);
+//     }
+
+//     arg.splice(0, filtered.length);
+//     number -= filtered.length;
+//     if (number <= 0) {
+//       return arr;
+//     }
+//   }
+// };
+
+// const groupIn10s = (...args) =>
+//   args
+//     .reduce((acc, el) => {
+//       let i = ~~(el / 10);
+//       console.log('i: ', i);
+//       console.log('acc[i]: ', acc[i]);
+//       console.log('el: ', el);
+//       acc[i] = (acc[i] || []).concat([el]);
+//       console.log('acc: ', acc);
+//       return acc;
+//     }, [])
+//     .map(el => el.sort());
+
+// console.log(groupIn10s(8, 12, 38, 3, 17, 19, 25, 35, 50)); //[3, 8, 12, 17, 19, 25, 35, 38, 50]
+// console.log(groupIn10s());
+// console.log(groupIn10s(900, 300, 22));
 /*
  *=======================================================
  */
