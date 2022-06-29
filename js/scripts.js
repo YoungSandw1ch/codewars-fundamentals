@@ -1895,8 +1895,44 @@ const ref = {
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
 // console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
 /*
- *=======================================================
+ *=================Simple card game======================
  */
+// const cardsRank = {
+//   2: 1,
+//   3: 2,
+//   4: 3,
+//   5: 4,
+//   6: 5,
+//   7: 6,
+//   8: 7,
+//   9: 8,
+//   T: 9,
+//   J: 10,
+//   Q: 11,
+//   K: 12,
+//   A: 13,
+// };
+
+// const winner = (deckSteve, deckJosh) => {
+//   let rankSteve = 0;
+//   let rankJosh = 0;
+
+//   for (let i = 0; i < deckSteve.length; i += 1) {
+//     if (cardsRank[deckSteve[i]] !== cardsRank[deckJosh[i]]) {
+//       cardsRank[deckSteve[i]] > cardsRank[deckJosh[i]]
+//         ? (rankSteve += 1)
+//         : (rankJosh += 1);
+//     }
+//   }
+
+//   if (rankSteve === rankJosh) return 'Tie';
+//   return rankSteve > rankJosh
+//     ? `Steve wins ${rankSteve} to ${rankJosh}`
+//     : `Josh wins ${rankJosh} to ${rankSteve}`;
+// };
+
+// console.log(winner(['A', '7', '8'], ['K', '5', '9']));
+// console.log(winner(['T'], ['T']));
 /*
  *=======================================================
  */
