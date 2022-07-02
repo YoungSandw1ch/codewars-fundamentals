@@ -2071,14 +2071,22 @@ const ref = {
  */
 
 const simplify = (i, num, den) => {
-  const arr = [i + ~~(num / den), 0, 0];
+  const arr = [i + ~~(num / den), num, den];
 
   for (let i = 2; i < num; i += 1) {
-    if (num % den === 0) return arr;
     if (num % i === 0 && den % i === 0) {
       arr[1] = num / i;
       arr[2] = den / i;
     }
+  }
+
+  if (num > den) {
+    arr[1] = num % den;
+  }
+
+  if (num % den === 0) {
+    arr[1] = 0;
+    arr[2] = 0;
   }
 
   return arr;
