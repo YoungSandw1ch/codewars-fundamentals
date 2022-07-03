@@ -2153,12 +2153,62 @@
 // console.log(narcissistic(7));
 // console.log(narcissistic(371));
 /*
- *=======================================================
+ *======================Detect Pangram==================
  */
+// const isPangram = string => {
+//   // const abc = Array.from({ length: 26 }, (_, i) => String.fromCharCode(97 + i));
+//   // console.log(abc);
+
+//   // const objFromAbc = abc.reduce((acc, e) => {
+//   //   acc[e] = 0;
+//   //   return acc;
+//   // }, {});
+//   // console.log(objFromAbc);
+
+//   return [...string.toLowerCase()]
+//     .reduce((acc, e) => {
+//       if (!acc.includes(e)) {
+//         acc.push(e);
+//       }
+//       return acc;
+//     }, [])
+//     .join('')
+//     .match(/[a-z]/g).length === 26
+//     ? true
+//     : false;
+// };
+
 /*
- *=======================================================
+ *---используя метод new Set----------------------------------
  */
 
+// const isPangram = string =>
+//   new Set(string.toLowerCase().match(/[a-z]/g)).size === 26;
+
+/*
+ *--------------регулярное выражение ВЕРШИНА МАСТЕРСТВА-------
+ */
+
+// const isPangram = string =>
+//   (string.match(/([a-z])(?!.*\1)/gi) || []).length === 26;
+
+// console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
+// console.log(isPangram('The quick brown fox jumps'));
+// console.log(isPangram(''));
+/*
+ *========================build tower====================
+ */
+// function towerBuilder(nFloors) {
+//   const tower = [];
+
+//   for (let i = 1, j = 1; i < nFloors; i += 1, j += 2) {
+//     tower.push(
+//       ' '.repeat(nFloors - i) + '*'.repeat(j) + ' '.repeat(nFloors - i),
+//     );
+//   }
+
+//   return tower;
+// }
 /*
  *=======================================================
  */
