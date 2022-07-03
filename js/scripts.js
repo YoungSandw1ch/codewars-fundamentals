@@ -2070,38 +2070,77 @@ const ref = {
  *--------херь которую я написал выше---------------
  */
 
-const simplify = (i, num, den) => {
-  const arr = [i + ~~(num / den), num, den];
+// const simplify = (int, num, den) => {
+//   const arr = [int + ~~(num / den), num, den];
 
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0 && den % i === 0) {
-      arr[1] = num / i;
-      arr[2] = den / i;
-    }
-  }
+//   if (num === 0 || den === 0) {
+//     return [int + ~~(num / den), 0, 0];
+//   }
 
-  if (num > den) {
-    arr[1] = num % den;
-  }
+//   if (num > den) {
+//     num = num % den;
+//     arr[1] = num;
+//   }
 
-  if (num % den === 0) {
-    arr[1] = 0;
-    arr[2] = 0;
-  }
+//   for (let i = 2; i <= num; i += 1) {
+//     if (num % i === 0 && den % i === 0) {
+//       arr[1] = num / i;
+//       arr[2] = den / i;
+//     }
+//   }
 
-  return arr;
-};
+//   if (num % den === 0) {
+//     arr[1] = 0;
+//     arr[2] = 0;
+//   }
 
-console.log(simplify(4, 3, 2));
-console.log(simplify(0, 15, 12));
-console.log(simplify(0, 11, 12));
-console.log(simplify(0, 36, 40));
-console.log(simplify(2, 6, 9));
-console.log(simplify(2, 14, 21));
-console.log(simplify(0, 32, 16));
+//   return arr;
+// };
+
 /*
- *=======================================================
+ *--используя алгоритм Эвклида (найбольший общий делитель) и рекурсивную функцию-------
  */
+
+// function simplify(int, num, den) {
+//   int += ~~(num / den);
+//   num = num % den;
+
+//   const d = (num, den) => {
+//     while (den) {
+//       var x = den;
+//       den = num % den;
+//       num = x;
+//     }
+//     return x;
+//   };
+//   console.log(d(num, den));
+// }
+
+// console.log(simplify(0, 25, 55));
+// console.log(simplify(4, 3, 2));
+// console.log(simplify(0, 15, 12));
+// console.log(simplify(0, 11, 12));
+// console.log(simplify(0, 36, 40));
+// console.log(simplify(2, 6, 9));
+// console.log(simplify(2, 14, 21));
+// console.log(simplify(0, 32, 16));
+// console.log(simplify(999, 100, 0));
+/*
+ *=Find the missing term in an Arithmetic Progression====
+ */
+// const findMissing = list => {
+//   const step = (list[list.length - 1] - list[0]) / list.length;
+
+//   for (let i = 1; i < list.length; i += 1) {
+//     if (list[i] - list[i - 1] !== step) {
+//       return list[i - 1] + step;
+//     }
+//   }
+// };
+
+// console.log(findMissing([1, 3, 5, 9, 11]));
+// console.log(findMissing([1, 4, 7, 13, 16]));
+// console.log(findMissing([1, 9, 17, 33, 41]));
 /*
  *=======================================================
  */
