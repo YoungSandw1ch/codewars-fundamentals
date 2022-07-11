@@ -2210,8 +2210,29 @@
 //   return tower;
 // }
 /*
- *=======================================================
+ *==================Give me a Diamond=====================
  */
+const diamond = n => {
+  let str = '';
+  let decr = n;
+
+  if (n > 0 && n % 2) {
+    for (let i = 1, j = 1; i <= n; i += 1, j += 2) {
+      const space = (n - j) / 2;
+      str +=
+        ' '.repeat(space >= 0 ? space : -space) +
+        '*'.repeat(j <= n ? j : (decr -= 2)) +
+        '\n';
+    }
+    return str;
+  }
+  return null;
+};
+console.log(diamond(1));
+console.log(diamond(33));
+console.log(diamond(2));
+// console.log(diamond(-2));
+// console.log(diamond(0));
 /*
  *=======================================================
  */
