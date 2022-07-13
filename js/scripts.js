@@ -2253,8 +2253,27 @@
 // console.log(goodVsEvil('0 0 0 0 0 10', '0 1 1 1 1 0 0'));
 // console.log(goodVsEvil('1 0 0 0 0 0', '1 0 0 0 0 0 0'));
 /*
- *=======================================================
+ *=============Calculate Pyramid Height==================
  */
+function pyramidHeight(n) {
+  let counter = 0;
+  for (let i = 1; i <= n; i += 1) {
+    n -= i ** 2;
+    if (n >= 0) {
+      counter += 1;
+    }
+    console.log('circle');
+  }
+  return counter;
+}
+
+// console.log(pyramidHeight(1));
+// console.log(pyramidHeight(4));
+// console.log(pyramidHeight(14));
+// console.log(pyramidHeight(13));
+console.log(pyramidHeight(130));
+console.log(pyramidHeight(13000));
+console.log(pyramidHeight(1500));
 /*
  *=======================================================
  */
