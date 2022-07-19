@@ -2379,9 +2379,31 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // const cub = new Cube(2);
 // console.log(cub.volume);
+
 /*
- *=======================================================
+ *=============Fun with ES6 Classes #4===================
  */
+// class Cube {
+//   constructor(length) {
+//     this.length = length;
+//   }
+
+//   get surfaceArea() {
+//     return this.length ** 2 * 6;
+//   }
+
+//   set surfaceArea(newArea) {
+//     this.length = Math.sqrt(newArea / 6);
+//   }
+
+//   get volume() {
+//     return this.length ** 3;
+//   }
+
+//   set volume(newVolume) {
+//     this.length = Math.cbrt(newVolume);
+//   }
+// }
 /*
  *=======================================================
  */
