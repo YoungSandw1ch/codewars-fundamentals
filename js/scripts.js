@@ -2277,12 +2277,6 @@
 /*
  *=============Fun with ES6 Classes #1 ==================
  */
-/*
-A constructor that accepts 4 arguments: 
-firstName/FirstName (defaults to "John" if not set), lastName/LastName (defaults to "Doe" if not set), age/Age (defaults to 0 if not set) and gender/Gender (defaults to "Male" if not set). These should be stored in this.firstName/this.FirstName, this.lastName/this.LastName, this.age/this.Age and this.gender/this.Gender respectively.
-A method sayFullName/SayFullName that accepts no arguments and returns the full name (e.g. "John Doe")
-A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
-*/
 // class Person {
 //   constructor(firstName = 'John', lastName = 'Doe', age = 0, gender = 'Male') {
 //     // this.firstName = firstName;
@@ -2304,12 +2298,265 @@ A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts
 // const sersus = new Person('sersus', 'neo', '31');
 // console.log(sersus);
 /*
- *=======================================================
+ *==============Fun with ES6 Classes #1==================
+ */
+// class Animal {
+//   constructor(name, age, legs, species, status) {
+//     this.name = name;
+//     this.age = age;
+//     this.legs = legs;
+//     this.species = species;
+//     this.status = status;
+//   }
+//   introduce() {
+//     return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+//   }
+// }
+
+// class Shark extends Animal {
+//   constructor(name, age, status) {
+//     super(name, age, 0, 'shark', status);
+//   }
+// }
+
+// class Cat extends Animal {
+//   constructor(name, age, status) {
+//     super(name, age, 4, 'cat', status);
+//   }
+
+//   introduce() {
+//     return super.introduce() + `  Meow meow!`;
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name, age, status, master) {
+//     super(name, age, 4, 'dog', status);
+//     this.master = master;
+//   }
+
+//   greetMaster() {
+//     return `Hello ${this.master}`;
+//   }
+// }
+
+// const shaggy = new Shark('shaggy', 16, 'married');
+// console.log(shaggy);
+
+/*
+ *==============Fun with ES6 Classes #3==================
+The object constructor for the class Cuboid should receive exactly three arguments in the following order: length, width, height and store these three values in this.length, this.width and this.height respectively.
+The class Cuboid should then have a getter surfaceArea which returns the surface area of the cuboid and a getter volume which returns the volume of the cuboid.
+
+class Cube is a subclass of class Cuboid. The constructor function of Cube should receive one argument only, its length, and use that value passed in to set this.length, this.width and this.height.
+Hint: Make a call to super, passing in the correct arguments, to make life easier ;)
  */
 
+// class Cuboid {
+//   constructor(length, width, height) {
+//     Object.assign(this, { length, width, height });
+//   }
+
+//   get surfaceArea() {
+//     const { length: l, width: w, height: h } = this;
+//     return (l * w + h * w + h * l) * 2;
+//   }
+
+//   get volume() {
+//     const { length: l, width: w, height: h } = this;
+//     return l * w * h;
+//   }
+// }
+// class Cube extends Cuboid {
+//   constructor(length) {
+//     super(length, length, length);
+//   }
+// }
+
+// const cubik = new Cuboid(1, 2, 3);
+// console.log(cubik.surfaceArea);
+// console.log(cubik.volume);
+
+// const cub = new Cube(2);
+// console.log(cub.volume);
 /*
  *=======================================================
  */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+/*
+ *=======================================================
+ */
+
 //=======================================================
 //=======================================================
 //=======================================================
