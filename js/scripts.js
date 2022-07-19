@@ -2407,6 +2407,27 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *=======================================================
  */
+// class Dog {
+//   constructor(name, age, gender, species, size, master, loyal) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.species = species;
+//     this.legs = 4;
+//     this.size = size;
+//     this.master = master;
+//     this.loyal = loyal;
+//   }
+// }
+
+// class Labrador extends Dog {
+//   constructor(name, age, gender, master) {
+//     super(name, age, gender, 'Labrador', 'Large', master, true);
+//   }
+// }
+
+// const polly = new Labrador('Polly', 10, 'female', 'Ludwig');
+// console.log(polly);
 /*
  *=======================================================
  */
