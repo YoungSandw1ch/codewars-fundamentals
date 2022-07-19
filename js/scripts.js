@@ -2429,8 +2429,70 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // const polly = new Labrador('Polly', 10, 'female', 'Ludwig');
 // console.log(polly);
 /*
- *=======================================================
+ *=====Fun with ES6 Classes #6 - Fake Files (Basic)======
  */
+class File {
+  constructor(fullName, content) {
+    this._fullName = fullName;
+    this._content = content;
+    this.count = {
+      lines: -1,
+      words: -1,
+    };
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  get filename() {
+    const arr = this._fullName.split('.');
+    arr.splice(arr.length - 1, 1);
+    return arr.join('.');
+  }
+
+  get extension() {
+    const arr = this._fullName.split('.');
+    return arr[arr.length - 1];
+  }
+
+  getContents() {
+    return this._content;
+  }
+
+  write(str) {
+    this._content += '\n' + str;
+  }
+
+  gets() {
+    const arr = this._content.split('\n');
+    this.count.lines += 1;
+    return arr[this.count.lines];
+  }
+
+  getc() {
+    const arr = this._content.split('');
+    this.count.words += 1;
+    return arr[this.count.words];
+  }
+}
+
+const file = new File('text.second.txt', 'Hello lorem');
+console.log('filename', file.filename);
+console.log('extension', file.extension);
+
+// console.log(file.content);
+// file.write('line 1');
+// file.write('line 2');
+// file.write('line 3');
+// console.log(file.gets());
+// console.log(file.gets());
+// console.log(file.gets());
+// console.log(file.gets());
+// console.log(file.gets());
+// console.log(file.fullName);
+// file.fullName = 'sws';
+// console.log(file.fullName);
 /*
  *=======================================================
  */
