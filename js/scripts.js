@@ -2255,28 +2255,54 @@
 /*
  *=============Calculate Pyramid Height==================
  */
-function pyramidHeight(n) {
-  let counter = 0;
-  for (let i = 1; i <= n; i += 1) {
-    n -= i ** 2;
-    if (n >= 0) {
-      counter += 1;
-    }
-    console.log('circle');
-  }
-  return counter;
-}
+// function pyramidHeight(n) {
+//   let counter = 0;
+//   for (let i = 1; i <= n; i += 1) {
+//     n -= i ** 2;
+//     if (n >= 0) {
+//       counter += 1;
+//     }
+//     console.log('circle');
+//   }
+//   return counter;
+// }
 
 // console.log(pyramidHeight(1));
 // console.log(pyramidHeight(4));
 // console.log(pyramidHeight(14));
 // console.log(pyramidHeight(13));
-console.log(pyramidHeight(130));
-console.log(pyramidHeight(13000));
-console.log(pyramidHeight(1500));
+// console.log(pyramidHeight(130));
+// console.log(pyramidHeight(13000));
+// console.log(pyramidHeight(1500));
 /*
- *=======================================================
+ *=============Fun with ES6 Classes #1 ==================
  */
+/*
+A constructor that accepts 4 arguments: 
+firstName/FirstName (defaults to "John" if not set), lastName/LastName (defaults to "Doe" if not set), age/Age (defaults to 0 if not set) and gender/Gender (defaults to "Male" if not set). These should be stored in this.firstName/this.FirstName, this.lastName/this.LastName, this.age/this.Age and this.gender/this.Gender respectively.
+A method sayFullName/SayFullName that accepts no arguments and returns the full name (e.g. "John Doe")
+A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
+*/
+// class Person {
+//   constructor(firstName = 'John', lastName = 'Doe', age = 0, gender = 'Male') {
+//     // this.firstName = firstName;
+//     // this.lastName = lastName;
+//     // this.age = age;
+//     // this.gender = gender;
+//     Object.assign(this, { firstName, lastName, age, gender });
+//   }
+
+//   sayFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+
+//   static greetExtraTerrestrials(raceName) {
+//     retrun`Welcome to Planet Earth ${raceName}`;
+//   }
+// }
+
+// const sersus = new Person('sersus', 'neo', '31');
+// console.log(sersus);
 /*
  *=======================================================
  */
