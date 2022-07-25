@@ -2496,26 +2496,85 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *==============Object Oriented Piracy===================
  */
-class Ship {
-  constructor(draft, crew) {
-    this.draft = draft;
-    this.crew = crew;
-  }
+// class Ship {
+//   constructor(draft, crew) {
+//     this.draft = draft;
+//     this.crew = crew;
+//   }
 
-  isWorthIt() {
-    return this.draft - 1.5 * this.crew >= 20;
-  }
-}
+//   isWorthIt() {
+//     return this.draft - 1.5 * this.crew >= 20;
+//   }
+// }
 
-const titanic = new Ship(15, 10);
-console.log(titanic.crew);
-console.log(titanic.isWorthIt());
+// const titanic = new Ship(15, 10);
+// console.log(titanic.crew);
+// console.log(titanic.isWorthIt());
 /*
  *=======================================================
  */
+// class Person {
+//   constructor(myName) {
+//     this.name = myName;
+//   }
+
+//   greet(yourName) {
+//     return 'Hello ' + yourName + ', my name is ' + this.name;
+//   }
+// }
+
+// var joe = new Person('Joe');
+// console.log(joe.greet('Kate')); // should return 'Hello Kate, my name is Joe'
+// console.log(joe.name);
 /*
- *=======================================================
+ *==================Who has the most money?==============
  */
+// class Student {
+//   constructor(name, fives, tens, twenties) {
+//     this.name = name;
+//     this.fives = fives;
+//     this.tens = tens;
+//     this.twenties = twenties;
+//   }
+// }
+
+// const andy = new Student('Andy', 0, 0, 2);
+// const stephen = new Student('Stephen', 0, 4, 0);
+// const eric = new Student('Eric', 8, 1, 0);
+// const david = new Student('David', 2, 0, 1);
+// const phil = new Student('Phil', 0, 2, 1);
+// const cam = new Student('Cameron', 2, 2, 0);
+// const geoff = new Student('Geoff', 0, 3, 0);
+
+// const students = [stephen, andy, eric, david, phil, cam, geoff];
+
+/*
+ *=---------------1ST VARIANT--------------------------
+ */
+// function mostMoney(students) {
+//   const money = students.map(a => a.fives * 5 + a.tens * 10 + a.twenties * 20);
+
+//   return money.every((el, i, a) => el === a[0])
+//     ? 'all'
+//     : students[money.indexOf(Math.max(...money))].name;
+// }
+
+/*
+ *=---------------2ND VARIANT--------------------------
+ */
+
+// function mostMoney(students) {
+//   const money = a => a.fives * 5 + a.tens * 10 + a.twenties * 20;
+
+//   const sortedStud = students.sort((a, b) => money(b) - money(a));
+//   if (students.length > 1 && money(sortedStud[0]) == money(sortedStud[1])) {
+//     return 'all';
+//   }
+
+//   return sortedStud[0].name;
+// }
+
+// console.log(mostMoney(students));
 /*
  *=======================================================
  */
