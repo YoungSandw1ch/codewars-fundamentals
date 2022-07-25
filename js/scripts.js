@@ -2431,55 +2431,55 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *=====Fun with ES6 Classes #6 - Fake Files (Basic)======
  */
-class File {
-  constructor(fullName, content) {
-    this._fullName = fullName;
-    this._content = content;
-    this.count = {
-      lines: -1,
-      words: -1,
-    };
-  }
+// class File {
+//   constructor(fullName, content) {
+//     this._fullName = fullName;
+//     this._content = content;
+//     this.count = {
+//       lines: -1,
+//       words: -1,
+//     };
+//   }
 
-  get fullName() {
-    return this._fullName;
-  }
+//   get fullName() {
+//     return this._fullName;
+//   }
 
-  get filename() {
-    const arr = this._fullName.split('.');
-    arr.splice(arr.length - 1, 1);
-    return arr.join('.');
-  }
+//   get filename() {
+//     const arr = this._fullName.split('.');
+//     arr.splice(arr.length - 1, 1);
+//     return arr.join('.');
+//   }
 
-  get extension() {
-    const arr = this._fullName.split('.');
-    return arr[arr.length - 1];
-  }
+//   get extension() {
+//     const arr = this._fullName.split('.');
+//     return arr[arr.length - 1];
+//   }
 
-  getContents() {
-    return this._content;
-  }
+//   getContents() {
+//     return this._content;
+//   }
 
-  write(str) {
-    this._content += '\n' + str;
-  }
+//   write(str) {
+//     this._content += '\n' + str;
+//   }
 
-  gets() {
-    const arr = this._content.split('\n');
-    this.count.lines += 1;
-    return arr[this.count.lines];
-  }
+//   gets() {
+//     const arr = this._content.split('\n');
+//     this.count.lines += 1;
+//     return arr[this.count.lines];
+//   }
 
-  getc() {
-    const arr = this._content.split('');
-    this.count.words += 1;
-    return arr[this.count.words];
-  }
-}
+//   getc() {
+//     const arr = this._content.split('');
+//     this.count.words += 1;
+//     return arr[this.count.words];
+//   }
+// }
 
-const file = new File('text.second.txt', 'Hello lorem');
-console.log('filename', file.filename);
-console.log('extension', file.extension);
+// const file = new File('text.second.txt', 'Hello lorem');
+// console.log('filename', file.filename);
+// console.log('extension', file.extension);
 
 // console.log(file.content);
 // file.write('line 1');
@@ -2494,8 +2494,22 @@ console.log('extension', file.extension);
 // file.fullName = 'sws';
 // console.log(file.fullName);
 /*
- *=======================================================
+ *==============Object Oriented Piracy===================
  */
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft;
+    this.crew = crew;
+  }
+
+  isWorthIt() {
+    return this.draft - 1.5 * this.crew >= 20;
+  }
+}
+
+const titanic = new Ship(15, 10);
+console.log(titanic.crew);
+console.log(titanic.isWorthIt());
 /*
  *=======================================================
  */
