@@ -2576,8 +2576,25 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // console.log(mostMoney(students));
 /*
- *=======================================================
+ *=============Image host filename generator=============
  */
+// function generateName() {
+//   // make sure to check the name is unique via the photoManager object\
+//   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f'];
+//   let name = '';
+
+//   console.log(Math.floor(Math.random() * 12));
+
+//   for (let i = 0; i < 6; i += 1) {
+//     name += letters[Math.floor(Math.random() * 12)];
+//   }
+
+//   // while (photoManager.nameExists(name)) {}
+
+//   return photoManager.nameExists(name) ? generateName() : name;
+// }
+
+// console.log(generateName());
 /*
  *=======================================================
  */
