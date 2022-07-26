@@ -2596,8 +2596,30 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // console.log(generateName());
 /*
- *=======================================================
+ *==========================Which are in?================
  */
+// const a1 = ['arp', 'live', 'strong'];
+// const a2 = ['lively', 'alive', 'harp', 'sharp', 'armstrong'];
+
+// const inArray = (array1, array2) =>
+//   array2
+//     .reduce((acc, el) => {
+//       for (let str of array1) {
+//         if (el.indexOf(str) !== -1 && !acc.includes(str)) {
+//           acc.push(str);
+//           continue;
+//         }
+//       }
+//       // array1.forEach(str => {
+//       //   if (el.indexOf(str) !== -1 && !acc.includes(str)) {
+//       //     acc.push(str);
+//       //   }
+//       // });
+//       return acc;
+//     }, [])
+//     .sort((a, b) => a.localeCompare(b));
+
+// console.log(inArray(a1, a2));
 /*
  *=======================================================
  */
