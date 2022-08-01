@@ -2621,8 +2621,30 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // console.log(inArray(a1, a2));
 /*
- *=======================================================
+ *==============Make the Deadfish Swim===================
  */
+// const parse = data => {
+//   let value = 0;
+//   return data.split('').reduce((acc, item) => {
+//     switch (item) {
+//       case 'i':
+//         value += 1;
+//         break;
+//       case 'd':
+//         value -= 1;
+//         break;
+//       case 's':
+//         value *= value;
+//         break;
+//       case 'o':
+//         acc.push(value);
+//     }
+//     return acc;
+//   }, []);
+// };
+
+// console.log(parse('iiisdoso'));
+// console.log(parse('iiisxxxdoso'));
 /*
  *=======================================================
  */
