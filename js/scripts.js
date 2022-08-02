@@ -2646,8 +2646,24 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // console.log(parse('iiisdoso'));
 // console.log(parse('iiisxxxdoso'));
 /*
- *=======================================================
+ *====================Valid Parentheses==================
  */
+const validParentheses = parens => {
+  let p = parens;
+
+  if (parens.length % 2 !== 0) return false;
+  for (let i = 0; i <= parens.length / 2; i += 1) {
+    if (p.includes('()')) {
+      p = p.replace('()', '');
+    }
+  }
+
+  return !Boolean(p.length);
+};
+
+console.log(validParentheses('(()'));
+console.log(validParentheses('(())((()())())'));
+
 /*
  *=======================================================
  */
