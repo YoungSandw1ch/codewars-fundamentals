@@ -2648,25 +2648,37 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *====================Valid Parentheses==================
  */
-const validParentheses = parens => {
-  let p = parens;
+// const validParentheses = parens => {
+//   let p = parens;
 
-  if (parens.length % 2 !== 0) return false;
-  for (let i = 0; i <= parens.length / 2; i += 1) {
-    if (p.includes('()')) {
-      p = p.replace('()', '');
-    }
-  }
+//   if (parens.length % 2 !== 0) return false;
+//   for (let i = 0; i <= parens.length / 2; i += 1) {
+//     if (p.includes('()')) {
+//       p = p.replace('()', '');
+//     }
+//   }
 
-  return !Boolean(p.length);
-};
+//   return !Boolean(p.length);
+// };
 
-console.log(validParentheses('(()'));
-console.log(validParentheses('(())((()())())'));
+// console.log(validParentheses('(()'));
+// console.log(validParentheses('(())((()())())'));
 
 /*
  *=======================================================
  */
+// function validParentheses(parens) {
+//   var n = 0;
+//   for (var i = 0; i < parens.length; i++) {
+//     if (parens[i] == '(') n++;
+//     if (parens[i] == ')') n--;
+//     if (n < 0) return false;
+//   }
+
+//   return n == 0;
+// }
+
+// console.log(validParentheses('((())())'));
 /*
  *=======================================================
  */
