@@ -2680,8 +2680,36 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // console.log(validParentheses('((())())'));
 /*
- *=======================================================
+ *=================Where my anagrams at?=================
  */
+const anagrams = (word, words) => {
+  const letters = createLettersCounter(word);
+
+  const result = words.filter(el => {
+    const o = createLettersCounter(el);
+    const keys = Object.keys(o);
+
+    for (let i = 0; i < keys.length; i += 1) {
+      if (letters[keys[i]] !== o[keys[i]]) {
+        return;
+      }
+    }
+
+    return el;
+  });
+
+  return result;
+};
+
+const createLettersCounter = word => {
+  const obj = {};
+
+  word.split('').forEach(el => (obj[el] ? (obj[el] += 1) : (obj[el] = 1)));
+
+  return obj;
+};
+
+console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])); //['carer', 'racer']
 /*
  *=======================================================
  */
