@@ -2775,8 +2775,30 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // console.log(humanReadable(59));
 // console.log(humanReadable(3599));
 /*
- *=======================================================
+ *=================Directions Reduction==================
  */
+// const dirReduc = arr => {
+//   const o = {
+//     NORTH: 1,
+//     SOUTH: -1,
+//     EAST: 2,
+//     WEST: -2,
+//   };
+
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (o[arr[i]] + o[arr[i + 1]] === 0) {
+//       arr.splice(i, 2);
+//       i = -1; // начать цикл с начала!!!
+//     }
+//   }
+
+//   return arr;
+// };
+
+// console.log(
+//   dirReduc(['NORTH', 'SOUTH', 'SOUTH', 'EAST', 'WEST', 'NORTH', 'WEST']),
+// );
+// console.log(dirReduc(['NORTH', 'WEST', 'SOUTH', 'EAST']));
 /*
  *=======================================================
  */
