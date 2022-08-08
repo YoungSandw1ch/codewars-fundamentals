@@ -2731,8 +2731,42 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 
 // console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])); //['carer', 'racer']
 /*
- *=======================================================
+ *===============Human Readable Time=====================
  */
+const humanReadable = sec => {
+  let h = '00',
+    m = '00',
+    s = '00';
+
+  if (sec >= 3600) {
+    h = Math.floor(sec / 3600);
+    h = h >= 10 ? `${h}` : `0${h}`;
+    // console.log('h', h);
+    sec = sec - Math.floor(sec / 3600) * 3600;
+  }
+
+  if (sec >= 60) {
+    // console.log(Math.floor(sec / 60) >= 10 ? `${m}` : `0${m}`);
+    m = Math.floor(sec / 60);
+    m = m >= 10 ? `${m}` : `0${m}`;
+    // console.log('m', m);
+    s = sec - Math.floor(sec / 60) * 60;
+    s = s >= 10 ? `${s}` : `0${s}`;
+    // console.log('s', s);
+    return `${h}:${m}:${s}`;
+  }
+
+  if (sec <= 59) {
+    s = sec >= 10 ? `${sec}` : `0${sec}`;
+    // console.log('s in s', s);
+  }
+
+  return `${h}:${m}:${s}`;
+};
+
+console.log(humanReadable(60));
+// console.log(humanReadable(59));
+// console.log(humanReadable(3599));
 /*
  *=======================================================
  */
