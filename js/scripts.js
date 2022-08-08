@@ -2733,38 +2733,45 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *===============Human Readable Time=====================
  */
-const humanReadable = sec => {
-  let h = '00',
-    m = '00',
-    s = '00';
+// const humanReadable = sec => {
+//   let h = '00',
+//     m = '00',
+//     s = '00';
 
-  if (sec >= 3600) {
-    h = Math.floor(sec / 3600);
-    h = h >= 10 ? `${h}` : `0${h}`;
-    // console.log('h', h);
-    sec = sec - Math.floor(sec / 3600) * 3600;
-  }
+//   if (sec >= 3600) {
+//     h = Math.floor(sec / 3600);
+//     h = h >= 10 ? `${h}` : `0${h}`;
+//     sec = sec - Math.floor(sec / 3600) * 3600;
+//   }
 
-  if (sec >= 60) {
-    // console.log(Math.floor(sec / 60) >= 10 ? `${m}` : `0${m}`);
-    m = Math.floor(sec / 60);
-    m = m >= 10 ? `${m}` : `0${m}`;
-    // console.log('m', m);
-    s = sec - Math.floor(sec / 60) * 60;
-    s = s >= 10 ? `${s}` : `0${s}`;
-    // console.log('s', s);
-    return `${h}:${m}:${s}`;
-  }
+//   if (sec >= 60) {
+//     m = Math.floor(sec / 60);
+//     m = m >= 10 ? `${m}` : `0${m}`;
+//     s = sec - Math.floor(sec / 60) * 60;
+//     s = s >= 10 ? `${s}` : `0${s}`;
+//     return `${h}:${m}:${s}`;
+//   }
 
-  if (sec <= 59) {
-    s = sec >= 10 ? `${sec}` : `0${sec}`;
-    // console.log('s in s', s);
-  }
+//   if (sec <= 59) {
+//     s = sec >= 10 ? `${sec}` : `0${sec}`;
+//   }
 
-  return `${h}:${m}:${s}`;
-};
+//   return `${h}:${m}:${s}`;
+// };
+/*
+ *----------------------через функцию с включеной головой
+ */
+// const humanReadable = s => {
+//   const toTime = n => (n >= 10 ? n : '0' + n);
 
-console.log(humanReadable(60));
+//   return (
+//     toTime(Math.floor(s / 3600)) + ':' +
+//     toTime(Math.floor((s / 60) % 60)) + ':' +
+//     toTime(s % 60)
+//   );
+// };
+
+// console.log(humanReadable(60));
 // console.log(humanReadable(59));
 // console.log(humanReadable(3599));
 /*
