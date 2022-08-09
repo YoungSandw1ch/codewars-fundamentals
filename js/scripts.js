@@ -2800,8 +2800,30 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // );
 // console.log(dirReduc(['NORTH', 'WEST', 'SOUTH', 'EAST']));
 /*
- *=======================================================
+ *=================Pete, the baker=======================
  */
+// const cakes = (recipe, available) => {
+//   const recKeys = Object.keys(recipe);
+//   const avKeys = Object.keys(available);
+//   let result = [];
+
+//   if (!recKeys.length || !avKeys.length) return 0;
+//   recKeys.forEach(e => {
+//     if (!avKeys.includes(e)) {
+//       result.push(0);
+//       return;
+//     }
+//     result.push(Math.floor(available[e] / recipe[e]));
+//   });
+//   return Math.min(...result);
+// };
+
+// console.log(
+//   cakes(
+//     { flour: 500, sugar: 200, eggs: 1 },
+//     { flour: 1200, sugar: 1200, milk: 200 },
+//   ),
+// );
 /*
  *=======================================================
  */
