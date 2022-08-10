@@ -2825,8 +2825,25 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 //   ),
 // );
 /*
- *=======================================================
+ *================The Hashtag Generator==================
  */
+const generateHashtag = str => {
+  const filtStr = spacesFilter(str);
+  const l = filtStr.join('').length;
+  if (!str || l === 0 || l > 139) return false;
+  return '#' + filtStr.map(e => toCapitalize(e)).join('');
+};
+
+function spacesFilter(s) {
+  return s.split(' ').filter(el => el !== '');
+}
+
+function toCapitalize(s) {
+  return s[0].toUpperCase() + s.substring(1, s.length);
+}
+
+console.log(generateHashtag('    hello     World   '));
+console.log(generateHashtag('       '));
 /*
  *=======================================================
  */
