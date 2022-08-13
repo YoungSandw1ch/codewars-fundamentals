@@ -2827,29 +2827,43 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *================The Hashtag Generator==================
  */
-const generateHashtag = str => {
-  const filtStr = spacesFilter(str);
-  const l = filtStr.join('').length;
-  if (!str || l === 0 || l > 139) return false;
-  return '#' + filtStr.map(e => toCapitalize(e)).join('');
-};
+// const generateHashtag = str => {
+//   const filtStr = spacesFilter(str);
+//   const l = filtStr.join('').length;
+//   if (!str || l === 0 || l > 139) return false;
+//   return '#' + filtStr.map(e => toCapitalize(e)).join('');
+// };
 
-function spacesFilter(s) {
-  return s.split(' ').filter(el => el !== '');
-}
+// function spacesFilter(s) {
+//   return s.split(' ').filter(el => el !== '');
+// }
 
-function toCapitalize(s) {
-  return s[0].toUpperCase() + s.substring(1, s.length);
-}
+// function toCapitalize(s) {
+//   return s[0].toUpperCase() + s.substring(1, s.length);
+// }
 
-console.log(generateHashtag('    hello     World   '));
-console.log(generateHashtag('       '));
+// console.log(generateHashtag('    hello     World   '));
+// console.log(generateHashtag('       '));
+/*
+ *==================Weight for weight====================
+ */
+const orderWeight = str =>
+  str
+    .split(' ')
+    .map(findWeight)
+    .sort((a, b) => a - b);
+const findWeight = s => s.split('').reduce((acc, e) => +e + acc, 0);
+// console.log(findWeight('103'));
+console.log(orderWeight('103 123 4444 99 2000')); // "2000 103 123 4444 99"
 /*
  *=======================================================
  */
-/*
- *=======================================================
- */
+// const orderWeight = str =>
+//   str
+//     .split(' ')
+//     .map(findWeight)
+//     .sort((a, b) => a - b);
+// const findWeight = s => s.split('').reduce((acc, e) => +e + acc, 0);
 /*
  *=======================================================
  */
