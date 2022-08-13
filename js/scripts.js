@@ -2847,23 +2847,30 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *==================Weight for weight====================
  */
-const orderWeight = str =>
-  str
-    .split(' ')
-    .map(findWeight)
-    .sort((a, b) => a - b);
-const findWeight = s => s.split('').reduce((acc, e) => +e + acc, 0);
-// console.log(findWeight('103'));
-console.log(orderWeight('103 123 4444 99 2000')); // "2000 103 123 4444 99"
+// const orderWeight = str =>
+//   str
+//     .split(' ')
+//     .sort((a, b) => w(a) - w(b) || a.localeCompare(b)) // тому що в сортуванні йде порівняння а - б ( якщо більше то 1ця)(якщо меньше то -1) а якщо одинакові то 0 а значить false тому спрацьовує "||"
+//     .join(' ');
+// const w = s => s.split('').reduce((acc, e) => +e + acc, 0);
+
+// console.log(orderWeight('10003 2000 11 44444444 11 22 123 1234000 9999')); // '11 11 2000 10003 22 123 1234000 44444444 9999'
 /*
  *=======================================================
  */
 // const orderWeight = str =>
 //   str
 //     .split(' ')
-//     .map(findWeight)
+//     .map(w)
 //     .sort((a, b) => a - b);
-// const findWeight = s => s.split('').reduce((acc, e) => +e + acc, 0);
+// const w = s => s.split('').reduce((acc, e) => +e + acc, 0);
+
+// const orderWeight = str =>
+//   str
+//     .split(' ')
+//     .sort((a, b) => w(a) - w(b))
+//     .join(' ');
+// const w = s => s.split('').reduce((acc, e) => +e + acc, 0);
 /*
  *=======================================================
  */
