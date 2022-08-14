@@ -2872,8 +2872,53 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 //     .join(' ');
 // const w = s => s.split('').reduce((acc, e) => +e + acc, 0);
 /*
- *=======================================================
+ *==============Human readable duration format===========
  */
+// For the purpose of this Kata, a year is 365 days and a day is 24 hours.
+const formatDuration = sec => {
+  let y = Math.floor(sec / (3600 * 24 * 365)); // / 86400) % 365
+  let d = Math.floor(sec / (3600 * 24)) % 365; // / 3600) % 24
+  let h = Math.floor(sec / 3600) % 24; // / 3600
+  let m = Math.floor(sec / 60) % 60; // / 60) % 60
+  let s = sec % 60; // % 60
+  const res = [];
+
+  if (!sec) return 'now';
+
+  if (y > 0) {
+    y = y + (y > 1 ? ' years' : ' year');
+    res.push(y);
+  }
+
+  if (d > 0) {
+    d = d + (d > 1 ? ' days' : ' day');
+    res.push(d);
+  }
+
+  if (h > 0) {
+    h = h + (h > 1 ? ' hours' : ' hour');
+    res.push(h);
+  }
+
+  if (m > 0) {
+    m = m + (m > 1 ? ' minutes' : ' minute');
+    res.push(m);
+  }
+
+  if (s > 0) {
+    s = s + (s > 1 ? ' seconds' : ' second');
+    res.push(s);
+  }
+
+  if (res.length >= 2) {
+    const newRes = res;
+    const last = newRes.splice(res.length - 1, 1);
+    return newRes.join(', ') + ' and ' + last;
+  }
+
+  return res.join(' ');
+};
+console.log(formatDuration(3153635565));
 /*
  *=======================================================
  */
@@ -2995,6 +3040,8 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
  *=======================================================
  */
 
+//=======================================================
+//=======================================================
 //=======================================================
 //=======================================================
 //=======================================================
