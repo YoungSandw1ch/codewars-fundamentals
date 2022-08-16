@@ -2875,50 +2875,33 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
  *==============Human readable duration format===========
  */
 // For the purpose of this Kata, a year is 365 days and a day is 24 hours.
-const formatDuration = sec => {
-  if (!sec) return 'now';
 
-  let y = Math.floor(sec / (3600 * 24 * 365));
-  let d = Math.floor(sec / (3600 * 24)) % 365;
-  let h = Math.floor(sec / 3600) % 24;
-  let m = Math.floor(sec / 60) % 60;
-  let s = sec % 60; // % 60
-  const res = [];
+// const formatDuration = sec => {
+//   if (!sec) return 'now';
 
-  if (y > 0) {
-    y = y + ' year' + (y > 1 ? 's' : '');
-    res.push(y);
-  }
+//   let y = Math.floor(sec / (3600 * 24 * 365));
+//   let d = Math.floor(sec / (3600 * 24)) % 365;
+//   let h = Math.floor(sec / 3600) % 24;
+//   let m = Math.floor(sec / 60) % 60;
+//   let s = sec % 60;
+//   const res = [];
 
-  if (d > 0) {
-    d = d + ' day' + (d > 1 ? 's' : '');
-    res.push(d);
-  }
+//   if (y > 0) res.push((y = y + ' year' + (y > 1 ? 's' : '')));
+//   if (d > 0) res.push((d = d + ' day' + (d > 1 ? 's' : '')));
+//   if (h > 0) res.push((h = h + ' hour' + (h > 1 ? 's' : '')));
+//   if (m > 0) res.push((m = m + ' minute' + (m > 1 ? 's' : '')));
+//   if (s > 0) res.push((s = s + ' second' + (s > 1 ? 's' : '')));
 
-  if (h > 0) {
-    h = h + ' hour' + (h > 1 ? 's' : '');
-    res.push(h);
-  }
+//   if (res.length >= 2) {
+//     const newRes = res;
+//     const last = newRes.splice(res.length - 1, 1);
+//     return newRes.join(', ') + ' and ' + last;
+//   }
 
-  if (m > 0) res.push((m = m + ' minute' + (m > 1 ? 's' : '')));
+//   return res.join(' ');
+// };
+// console.log(formatDuration(3153635565));
 
-  if (s > 0) {
-    s = s + ' second' + (s > 1 ? 's' : '');
-    res.push(s);
-  }
-
-  if (res.length >= 2) {
-    const newRes = res;
-    const last = newRes.splice(res.length - 1, 1);
-    return newRes.join(', ') + ' and ' + last;
-  }
-
-  return res.join(' ');
-};
-console.log(formatDuration(3153635565));
-/*
- *=======================================================
- */
 /*
  *=======================================================
  */
