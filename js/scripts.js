@@ -2915,27 +2915,25 @@ function nextBigger(n) {
   for (let i = arr.length - 1; i > -1; i -= 1) {
     if (arr[i] > arr[i - 1]) {
       let res = arr.splice(i - 1);
-      const max = Math.max(...res);
-      res.splice(res.indexOf(max), 1);
+      const min = Math.min(...res.filter(e => e > res[0]));
+      res.splice(res.indexOf(min), 1);
       res = res.sort();
-      // console.log(res);
-      // console.log(arr);
-      // console.log(max);
-      return +[...arr, max, ...res].join('');
+      return +[...arr, min, ...res].join('');
     }
   }
   return -1;
 }
 
 console.log(nextBigger(1234567890)); //1234567980 need 1234567908
-// console.log(nextBigger(12));
-// console.log(nextBigger(513));
-// console.log(nextBigger(2017));
-// console.log(nextBigger(210710)); //217010 need  211700
-// console.log(nextBigger(414));
-// console.log(nextBigger(4332));
+console.log(nextBigger(12));
+console.log(nextBigger(513));
+console.log(nextBigger(2017));
+console.log(nextBigger(210710)); //217010 need  211700
+console.log(nextBigger(414));
+console.log(nextBigger(4332));
+console.log(nextBigger(4904874));
 console.log(nextBigger(144));
-// console.log(nextBigger(9));
+console.log(nextBigger(9));
 /*
  *=======================================================
  */
