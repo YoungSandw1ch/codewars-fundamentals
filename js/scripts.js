@@ -2903,8 +2903,39 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // console.log(formatDuration(3153635565));
 
 /*
- *=======================================================
+ *====Next bigger number with the same digits============
  */
+function nextBigger(n) {
+  const arr = n
+    .toString()
+    .split('')
+    .map(e => +e);
+  if (arr.length <= 1) return -1;
+
+  for (let i = arr.length - 1; i > -1; i -= 1) {
+    if (arr[i] > arr[i - 1]) {
+      let res = arr.splice(i - 1);
+      const max = Math.max(...res);
+      res.splice(res.indexOf(max), 1);
+      res = res.sort();
+      // console.log(res);
+      // console.log(arr);
+      // console.log(max);
+      return +[...arr, max, ...res].join('');
+    }
+  }
+  return -1;
+}
+
+console.log(nextBigger(1234567890)); //1234567980 need 1234567908
+// console.log(nextBigger(12));
+// console.log(nextBigger(513));
+// console.log(nextBigger(2017));
+// console.log(nextBigger(210710)); //217010 need  211700
+// console.log(nextBigger(414));
+// console.log(nextBigger(4332));
+console.log(nextBigger(144));
+// console.log(nextBigger(9));
 /*
  *=======================================================
  */
