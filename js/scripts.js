@@ -2905,37 +2905,46 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *====Next bigger number with the same digits============
  */
-function nextBigger(n) {
-  const arr = n
-    .toString()
-    .split('')
-    .map(e => +e);
-  if (arr.length <= 1) return -1;
+// function nextBigger(n) {
+//   const arr = makeArr(n);
+//   if (arr.length <= 1) return -1;
 
-  for (let i = arr.length - 1; i > -1; i -= 1) {
-    if (arr[i] > arr[i - 1]) {
-      let res = arr.splice(i - 1);
-      const min = Math.min(...res.filter(e => e > res[0]));
-      res.splice(res.indexOf(min), 1);
-      res = res.sort();
-      return +[...arr, min, ...res].join('');
-    }
-  }
-  return -1;
-}
+//   for (let i = arr.length - 1; i > -1; i -= 1) {
+//     if (arr[i] > arr[i - 1]) {
+//       let res = arr.splice(i - 1);
 
-console.log(nextBigger(1234567890)); //1234567980 need 1234567908
-console.log(nextBigger(12));
-console.log(nextBigger(513));
-console.log(nextBigger(2017));
-console.log(nextBigger(210710)); //217010 need  211700
-console.log(nextBigger(414));
-console.log(nextBigger(4332));
-console.log(nextBigger(4904874));
-console.log(nextBigger(144));
-console.log(nextBigger(9));
+//       const min = findFistNumToReplace(res);
+//       res.splice(res.indexOf(min), 1);
+//       res = res.sort();
+//       return +[...arr, min, ...res].join('');
+//     }
+//   }
+//   return -1;
+// }
+
+// function makeArr(n) {
+//   return n
+//     .toString()
+//     .split('')
+//     .map(e => +e);
+// }
+
+// function findFistNumToReplace(a) {
+//   return Math.min(...a.filter(e => e > a[0]));
+// }
+
+// console.log(nextBigger(1234567890)); //1234567980 need 1234567908
+// console.log(nextBigger(12));
+// console.log(nextBigger(513));
+// console.log(nextBigger(2017));
+// console.log(nextBigger(210710)); //217010 need  211700
+// console.log(nextBigger(414));
+// console.log(nextBigger(4332));
+// console.log(nextBigger(4904874));
+// console.log(nextBigger(144));
+// console.log(nextBigger(9));
 /*
- *=======================================================
+ *===========Sudoku Solution Validator==================
  */
 /*
  *=======================================================
