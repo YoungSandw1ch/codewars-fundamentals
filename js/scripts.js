@@ -2947,8 +2947,22 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
  *===========Sudoku Solution Validator==================
  */
 /*
- *=======================================================
+ *===========First non-repeating character===============
  */
+const firstNonRepeatingLetter = s => {
+  const l = {};
+  s.toLowerCase()
+    .split('')
+    .forEach(e => (l[e] = l[e] ? l[e] + 1 : 1));
+
+  const r = Object.keys(l).filter(e => l[e] === 1)[0] || '';
+  return s.includes(r) ? r : r.toUpperCase();
+};
+
+console.log(firstNonRepeatingLetter('sTresS'));
+// console.log(firstNonRepeatingLetter('stress'));
+// console.log(firstNonRepeatingLetter('moonmen'));
+// console.log(firstNonRepeatingLetter('aassddffgghh'));
 /*
  *=======================================================
  */
