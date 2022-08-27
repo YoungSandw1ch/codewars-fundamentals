@@ -2978,8 +2978,21 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 // console.log(firstNonRepeatingLetter('moon,men'));
 // console.log(firstNonRepeatingLetter('aassddffgghh'));
 /*
- *=======================================================
+ *======================Strip Comments===================
  */
+const solution = (input, markers) => {
+  let v = markers.join('\\');
+  // console.log(v);
+  const re = new RegExp('[\\' + v + '].*', 'gi');
+  // console.log(re);
+
+  return input.replace(re, '').trim();
+};
+
+console.log(
+  solution('apples, pears # and bananas\ngrapes\nbananas !apples', ['#', '!']),
+); //"apples, pears\ngrapes\nbananas"
+// console.log('apples, pears # and bananas\ngrapes\nbananas !apples');
 /*
  *=======================================================
  */
