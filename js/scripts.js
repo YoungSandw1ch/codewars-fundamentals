@@ -2980,19 +2980,18 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *======================Strip Comments===================
  */
-const solution = (input, markers) => {
-  let v = markers.join('\\');
-  // console.log(v);
-  const re = new RegExp('[\\' + v + '].*', 'gi');
-  // console.log(re);
+// const solution = (input, markers) => {
+//   let v = markers.join('\\');
+//   // console.log(v);
+//   const re = new RegExp('\\s?[\\' + v + '].*', 'gi');
+//   // console.log(re);
 
-  return input.replace(re, '').trim();
-};
+//   return input.replace(re, '').trim();
+// };
 
-console.log(
-  solution('apples, pears # and bananas\ngrapes\nbananas !apples', ['#', '!']),
-); //"apples, pears\ngrapes\nbananas"
-// console.log('apples, pears # and bananas\ngrapes\nbananas !apples');
+// console.log(
+//   solution('apples, pears # and bananas\ngrapes\nbananas !apples', ['#', '!']),
+// ); //"apples, pears\ngrapes\nbananas"
 /*
  *=======================================================
  */
