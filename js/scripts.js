@@ -2993,11 +2993,52 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 //   solution('apples, pears # and bananas\ngrapes\nbananas !apples', ['#', '!']),
 // ); //"apples, pears\ngrapes\nbananas"
 /*
- *=======================================================
+ *=======================Sum of Intervals================
  */
+const sumIntervals = i => {
+  const sa = [].concat(...i).sort((a, b) => a - b);
+  const fa = sa.filter((e, i, a) => a[i + 1] - 1 !== e);
+  console.log('sa: ', sa);
+  console.log('fa: ', fa);
+  let a = 0;
+
+  for (let i = 0, j = 1; i < fa.length; i += 2, j += 2) {
+    a += fa[j] - fa[i];
+  }
+  return a;
+};
+
+function sum(a) {
+  return a[a.length - 1] - a[0];
+}
+
+// console.log(sum([10, 20]));
+
+console.log(
+  sumIntervals([
+    [1, 4],
+    [7, 10],
+    [3, 5],
+  ]),
+);
+
+console.log(
+  sumIntervals([
+    [0, 20],
+    [-100000000, 10],
+    [30, 40],
+  ]),
+);
 /*
- *=======================================================
+ *===========================Flatten=====================
  */
+// var flatten = function (a) {
+//   return a.reduce((acc, el) => acc.concat(el), []);
+// };
+
+// const flatten = a => [].concat(...a);
+
+// console.log(flatten([1, 2, [3, 4], [5, 6, [7, 8]]]));
 /*
  *=======================================================
  */
