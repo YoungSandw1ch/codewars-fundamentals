@@ -2997,7 +2997,7 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
  */
 const sumIntervals = i => {
   const sa = [].concat(...i).sort((a, b) => a - b);
-  const fa = sa.filter((e, i, a) => a[i + 1] - 1 !== e);
+  const fa = sa.filter((e, i, a) => e + 1 !== a[i + 1] && e !== a[i + 1]);
   console.log('sa: ', sa);
   console.log('fa: ', fa);
   let a = 0;
@@ -3027,6 +3027,16 @@ console.log(
     [0, 20],
     [-100000000, 10],
     [30, 40],
+  ]),
+);
+
+console.log(
+  sumIntervals([
+    [1, 5],
+    [10, 20],
+    [1, 6],
+    [16, 19],
+    [5, 11],
   ]),
 );
 /*
