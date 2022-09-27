@@ -3006,72 +3006,102 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *====================Strings Mix========================
  */
-function mix(s1, s2) {
-  s1 = filterStr(s1);
-  s2 = filterStr(s2);
-  const $1 = sameLettersCounter(s1, {});
-  const $2 = sameLettersCounter(s2, {});
-  console.log($1);
-  console.log($2);
+// function mix(s1, s2) {
+//   s1 = filterStr(s1);
+//   s2 = filterStr(s2);
+//   const $1 = sameLettersCounter(s1, {});
+//   const $2 = sameLettersCounter(s2, {});
+//   console.log($1);
+//   console.log($2);
 
-  const str = compareLettersAndMakeString($1, $2);
-  return str.split('/').sort((a, b) => b.length - a.length);
-}
+//   const str = compareLettersAndMakeString($1, $2);
+//   return str.split('/').sort((a, b) => b.length - a.length);
+// }
 
-function sameLettersCounter(str, obj) {
-  str.forEach(e => {
-    if (e === e.toLowerCase()) {
-      obj[e] ? (obj[e] += 1) : (obj[e] = 1);
-    }
-  });
-  return filterSingleLetters(obj);
-}
+// function sameLettersCounter(str, obj) {
+//   str.forEach(e => {
+//     if (e === e.toLowerCase()) {
+//       obj[e] ? (obj[e] += 1) : (obj[e] = 1);
+//     }
+//   });
+//   return filterSingleLetters(obj);
+// }
 
-function filterStr(str) {
-  return str.match(/[a-z]/g);
-}
+// function filterStr(str) {
+//   return str.match(/[a-z]/g);
+// }
 
-function filterSingleLetters(obj) {
-  for (const l in obj) {
-    if (obj[l] <= 1) delete obj[l];
-  }
-  return obj;
-}
+// function filterSingleLetters(obj) {
+//   for (const l in obj) {
+//     if (obj[l] <= 1) delete obj[l];
+//   }
+//   return obj;
+// }
 
-function compareLettersAndMakeString(o1, o2) {
-  let str = '';
-  const keys = new Set([...Object.keys(o1), ...Object.keys(o2)]);
-  // console.log(keys);
-  for (const key of keys) {
-    // console.log(o1[key]);
+// function compareLettersAndMakeString(o1, o2) {
+//   let str = '';
+//   const keys = new Set([...Object.keys(o1), ...Object.keys(o2)]);
+//   // console.log(keys);
+//   for (const key of keys) {
+//     // console.log(o1[key]);
 
-    if (o1[key] > (o2[key] || 0)) {
-      str += `1:${key.repeat(o1[key])}/`;
-    }
-    if (o2[key] > (o1[key] || 0)) {
-      str += `2:${key.repeat(o2[key])}/`;
-    }
-    if (o2[key] === o1[key]) {
-      str += `=:${key.repeat(o2[key])}/`;
-    }
-  }
-  return str;
-}
+//     if (o1[key] > (o2[key] || 0)) {
+//       str += `1:${key.repeat(o1[key])}/`;
+//     }
+//     if (o2[key] > (o1[key] || 0)) {
+//       str += `2:${key.repeat(o2[key])}/`;
+//     }
+//     if (o2[key] === o1[key]) {
+//       str += `=:${key.repeat(o2[key])}/`;
+//     }
+//   }
+//   return str;
+// }
 
-// const o = [
-//   { n: 1, a: 3 },
-//   { n: 2, a: 3 },
-// ];
-// console.log(filterSingleLetters({ a: 1, b: 2, c: 3 }));
-// const object = {};
-// console.log(sameLettersCounter(' iiiIIIaaaAAAbbb', object));
-console.log(mix(' In many languages', " there's a pair of functions")); // "1:aaa/1:nnn/1:gg/2:ee/2:ff/2:ii/2:oo/2:rr/2:ss/2:tt"
-console.log(mix('Are they here', 'yes, they are here')); //2:eeeee/2:yy/=:hh/=:rr
-//1:aaa/1:nnn/1:gg/2:ee/2:ff/2:ii/2:oo/2:rr/2:ss/2:tt
-//1:nnn/1:aaa/1:gg/2:tt/2:ee/2:rr/2:ss/2:ii/2:oo/2:ff/
+// // const o = [
+// //   { n: 1, a: 3 },
+// //   { n: 2, a: 3 },
+// // ];
+// // console.log(filterSingleLetters({ a: 1, b: 2, c: 3 }));
+// // const object = {};
+// // console.log(sameLettersCounter(' iiiIIIaaaAAAbbb', object));
+// console.log(mix(' In many languages', " there's a pair of functions")); // "1:aaa/1:nnn/1:gg/2:ee/2:ff/2:ii/2:oo/2:rr/2:ss/2:tt"
+// console.log(mix('Are they here', 'yes, they are here')); //2:eeeee/2:yy/=:hh/=:rr
+// //1:aaa/1:nnn/1:gg/2:ee/2:ff/2:ii/2:oo/2:rr/2:ss/2:tt
+// //1:nnn/1:aaa/1:gg/2:tt/2:ee/2:rr/2:ss/2:ii/2:oo/2:ff/
+
 /*
- *=======================================================
+ *=======Jokes you've been 'awaiting' for ... promise====
  */
+function submitOrder(user) {
+  var shoppingCart, zipCode, shippingRate, orderSuccessful;
+
+  // Get the current user's shopping cart
+  OrderAPI.getShoppingCartAsync(user).then(function (cart) {
+    shoppingCart = cart;
+  });
+
+  // Also look up the ZIP code from their profile
+  CustomerAPI.getProfileAsync(user).then(function (profile) {
+    zipCode = profile.zipCode;
+  });
+
+  // Calculate the shipping fees
+  shippingRate = calculateShipping(shoppingCart, zipCode);
+
+  // Submit the order
+  OrderAPI.placeOrderAsync(shoppingCart, shippingRate).then(function (success) {
+    orderSuccessful = success;
+  });
+
+  console.log(
+    `Your order ${orderSuccessful ? 'was' : 'was NOT'} placed successfully`,
+  );
+}
+
+// function calculateShipping(cart, code) {}
+
+submitOrder(12345);
 /*
  *=======================================================
  */
