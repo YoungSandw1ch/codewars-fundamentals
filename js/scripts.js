@@ -3073,38 +3073,93 @@ Hint: Make a call to super, passing in the correct arguments, to make life easie
 /*
  *=======Jokes you've been 'awaiting' for ... promise====
  */
-function submitOrder(user) {
-  var shoppingCart, zipCode, shippingRate, orderSuccessful;
+// function submitOrder(user) {
+//   var shoppingCart, zipCode, shippingRate, orderSuccessful;
 
-  // Get the current user's shopping cart
-  OrderAPI.getShoppingCartAsync(user).then(function (cart) {
-    shoppingCart = cart;
-  });
+//   // Get the current user's shopping cart
+//   OrderAPI.getShoppingCartAsync(user).then(function (cart) {
+//     shoppingCart = cart;
+//   });
 
-  // Also look up the ZIP code from their profile
-  CustomerAPI.getProfileAsync(user).then(function (profile) {
-    zipCode = profile.zipCode;
-  });
+//   // Also look up the ZIP code from their profile
+//   CustomerAPI.getProfileAsync(user).then(function (profile) {
+//     zipCode = profile.zipCode;
+//   });
 
-  // Calculate the shipping fees
-  shippingRate = calculateShipping(shoppingCart, zipCode);
+//   // Calculate the shipping fees
+//   shippingRate = calculateShipping(shoppingCart, zipCode);
 
-  // Submit the order
-  OrderAPI.placeOrderAsync(shoppingCart, shippingRate).then(function (success) {
-    orderSuccessful = success;
-  });
+//   // Submit the order
+//   OrderAPI.placeOrderAsync(shoppingCart, shippingRate).then(function (success) {
+//     orderSuccessful = success;
+//   });
 
-  console.log(
-    `Your order ${orderSuccessful ? 'was' : 'was NOT'} placed successfully`,
-  );
-}
+//   console.log(
+//     `Your order ${orderSuccessful ? 'was' : 'was NOT'} placed successfully`,
+//   );
+// }
 
-// function calculateShipping(cart, code) {}
+// // function calculateShipping(cart, code) {}
 
-submitOrder(12345);
+// submitOrder(12345);
 /*
  *=======================================================
  */
+const dadJokes = [
+  {
+    id: '1',
+    name: 'ashes',
+    joke: 'When the window fell into the incinerator, it was a pane in the ash to retrieve.',
+  },
+  {
+    id: '2',
+    name: "pirate's favorite letter",
+    joke: "What's a pirate's favorite letter? It be the Sea",
+  },
+  {
+    id: '3',
+    name: 'counting cows',
+    joke: "How do you count cows? A 'Cow'culator",
+  },
+  {
+    id: '4',
+    name: "He's Alright",
+    joke: "Did you hear about the guy whose whole left side was cut off? He's all right now.",
+  },
+  {
+    id: '5',
+    name: 'Bakery Fire',
+    joke: "My friend's bakery burned down last night. Now his business is toast.",
+  },
+  {
+    id: '6',
+    name: 'Nut Assault',
+    joke: 'Two peanuts were walking down the street. One was a salted.',
+  },
+  {
+    id: '7',
+    name: 'Wonderwall',
+    joke: 'My son asked me to stop singing Oasis songs in public. I said maybe.',
+  },
+  {
+    id: '8',
+    name: 'Banking',
+    joke: 'I used to be a banker but I lost interest',
+  },
+  {
+    id: '9',
+    name: 'Golfer Pants',
+    joke: 'Why did the golfer bring two pairs of pants? In case he got a hole-in-one.',
+  },
+  {
+    id: '10',
+    name: 'Lieutenant Dan',
+    joke: "To the man in the wheelchair that stole my camouflage jacket; You can hide, but you can't run.",
+  },
+];
+
+const jokes = new Promise(dadJokes);
+console.log(jokes);
 /*
  *=======================================================
  */
