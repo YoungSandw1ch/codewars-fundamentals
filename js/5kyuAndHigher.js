@@ -76,6 +76,22 @@
 /*
  *=====================
  */
+function round(num) {
+  let r = num.toString().split('.');
+  let fN = +r[0];
+  r = num - fN;
+
+  return r <= 0.5 ? fN : ++fN;
+}
+
+Math.ceil = function (number) {};
+
+Math.floor = function (number) {
+  let r = num.toString().split('.');
+  return +r[0];
+};
+
+console.log(round(0.5));
 /*
  *=====================
  */
