@@ -47,13 +47,32 @@
 /*
  *=====================Extract the domain name from a URL
  */
-function domainName(url) {}
+// function domainName(url) {}
 
-console.log(domainName('http://google.com'));
-console.log(domainName('www.xakep.ru'));
+// console.log(domainName('http://google.com'));
+// console.log(domainName('www.xakep.ru'));
 /*
- *=====================
+ *=====================What's a Perfect Power anyway?
  */
+// const isPP = n => {
+//   for (let i = 2; i <= n; i += 1) {
+//     const value = Math.round(n ** (1 / i) * 1000) / 1000;
+//     // console.log('value: ', value);
+//     if (value <= 1) return null;
+//     if (Number.isInteger(value) && value ** i == n) return [value, i];
+//   }
+
+//   return null;
+// };
+
+// // console.log(isPP(4));
+// // console.log(isPP(5));
+// // console.log(isPP(9));
+// // console.log(isPP(125));
+// console.log(isPP(343));
+// // console.log(Math.cbrt(343));
+// // console.log(343 ** (1 / 3) * 1000);
+// // console.log(isPP(1124864));
 /*
  *=====================
  */
