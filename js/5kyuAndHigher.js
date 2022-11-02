@@ -74,28 +74,42 @@
 // // console.log(343 ** (1 / 3) * 1000);
 // // console.log(isPP(1124864));
 /*
- *=====================
+ *=====================Math Issues
  */
-function round(num) {
-  let r = num.toString().split('.');
-  let fN = +r[0];
-  r = num - fN;
+// function round(num) {
+//   let r = num.toString().split('.');
+//   let fN = +r[0];
+//   r = num - fN;
 
-  return r <= 0.5 ? fN : ++fN;
+//   return r <= 0.5 ? fN : ++fN;
+// }
+
+// Math.ceil = function (number) {
+//   let r = num.toString().split('.');
+//   if (r[1]) return +r[0] + 1;
+//   return +r[0];
+// };
+
+// Math.floor = function (number) {
+//   let r = num.toString().split('.');
+//   return +r[0];
+// };
+
+// console.log(round(0.5));
+/*
+ *=====================Josephus Survivor
+ */
+function josephusSurvivor(n, k) {
+  let arr = Array.from({ length: n }, (_, x) => ++x);
+  console.log('arr: ', arr);
+  if (n.length === 1) return 1;
+
+  return arr;
 }
 
-Math.ceil = function (number) {};
-
-Math.floor = function (number) {
-  let r = num.toString().split('.');
-  return +r[0];
-};
-
-console.log(round(0.5));
-/*
- *=====================
- */
-
+// console.log(josephusSurvivor(11, 19));
+// console.log(josephusSurvivor(7, 3));
+// console.log(josephusSurvivor(14, 2));
 /*
  *=====================
  */
