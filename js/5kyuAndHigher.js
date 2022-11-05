@@ -104,6 +104,12 @@ function josephusSurvivor(n, k) {
   console.log('arr: ', arr);
   if (n.length === 1) return 1;
 
+  for (let i = k; arr.length === 1; i += k) {
+    if (arr.length < k) {
+      i = k - arr.length;
+    }
+  }
+
   return arr;
 }
 
