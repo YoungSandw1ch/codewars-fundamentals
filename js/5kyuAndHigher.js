@@ -101,20 +101,48 @@
  */
 function josephusSurvivor(n, k) {
   let arr = Array.from({ length: n }, (_, x) => ++x);
-  console.log('arr: ', arr);
-  if (n.length === 1) return 1;
+  let s = 0;
 
-  for (let i = k; arr.length === 1; i += k) {
-    if (arr.length < k) {
-      i = k - arr.length;
-    }
+  while (arr.length > 1) {
+    s = (s + (k - 1)) % arr.length;
+    console.log(s);
+    arr.splice(s, 1);
+    console.log(arr);
   }
 
-  return arr;
+  // for (let i = 1; i < n; i++) {
+  //   if (k > n) {
+  //     arr = arr.filter(e => e);
+  //     k = k % arr.length;
+  //     console.log('k: ', k);
+  //   }
+
+  //   arr[k - 1] = 0;
+  //   console.log('arr: ', arr);
+  //   k += step;
+  // }
+
+  // let step = k;
+  // for (let i = 0; i < n; i += 1) {
+  //   console.log(arr);
+
+  //   if (arr.length < step) {
+  //     step = step - n;
+  //     arr.splice(step, 1);
+
+  //     step += k;
+  //   }
+
+  //   arr.splice(step - 1 - i, 1);
+  //   step += k;
+  //   if (arr.length === 1) return;
+  // }
+
+  return arr[0];
 }
 
 // console.log(josephusSurvivor(11, 19));
-// console.log(josephusSurvivor(7, 3));
+console.log(josephusSurvivor(7, 3));
 // console.log(josephusSurvivor(14, 2));
 /*
  *=====================
